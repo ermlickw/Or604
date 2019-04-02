@@ -1,0 +1,467 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17251,        459]
+NotebookOptionsPosition[     14278,        399]
+NotebookOutlinePosition[     14810,        420]
+CellTagsIndexPosition[     14767,        417]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["HW#4 ", "Title",
+ CellChangeTimes->{{3.726151371909917*^9, 3.7261513868767447`*^9}, {
+  3.7267555042256317`*^9, 3.7267555044312105`*^9}, {3.7271981285046387`*^9, 
+  3.727198128597793*^9}, {3.7285681984846044`*^9, 3.7285681986142797`*^9}, {
+  3.7310075990462046`*^9, 3.7310075991649885`*^9}, {3.731612391632927*^9, 
+  3.7316123917567525`*^9}, {3.7349792000777054`*^9, 3.7349792008277817`*^9}, {
+  3.7603801674569254`*^9, 
+  3.7603801721543984`*^9}},ExpressionUUID->"b3e566a3-cd56-48c6-a278-\
+fa2a36e0abad"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+3/5/2019
+William Ermlick \
+\>", "Chapter",
+ CellChangeTimes->{{3.7261513899729776`*^9, 3.7261513973565845`*^9}, {
+  3.7267555077530155`*^9, 3.726755509759369*^9}, {3.7271981326635337`*^9, 
+  3.727198132774472*^9}, {3.728568201752822*^9, 3.7285682023959265`*^9}, {
+  3.731007605670244*^9, 3.7310076077899227`*^9}, {3.731612396772732*^9, 
+  3.731612396924741*^9}, {3.7349792057099347`*^9, 3.7349792081542063`*^9}, {
+  3.7603801766557245`*^9, 3.760380182546444*^9}, {3.7603808892808547`*^9, 
+  3.7603809066101475`*^9}},ExpressionUUID->"de9daf93-d56a-49cf-ad6b-\
+2d321b77242c"],
+
+Cell[CellGroupData[{
+
+Cell["#1", "Section",
+ CellChangeTimes->{{3.728568229414795*^9, 3.728568238645812*^9}, {
+  3.730896615044466*^9, 3.730896615155164*^9}, {3.7603801855203533`*^9, 
+  3.7603802128347163`*^9}, {3.760380316744357*^9, 
+  3.760380334308654*^9}},ExpressionUUID->"04ae38aa-fbbc-47ce-8ac3-\
+5226f71a17e4"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"1", " ", "cup", " ", "of", " ", "flour"}], " ", "=", " ", 
+   RowBox[{"120", " ", "grams"}]}], ",", " ", 
+  RowBox[{
+   RowBox[{"1", " ", "gram"}], " ", "=", " ", 
+   RowBox[{"0.0022046", " ", "pounds"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", " ", "dough"}], " ", "=", " ", 
+  RowBox[{
+  "0.859802", " ", "pounds", " ", "of", " ", 
+   "flour"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", " ", "sack"}], " ", "=", " ", 
+  RowBox[{"58.1529", " ", "doughs"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"1", " ", "truck"}], " ", "=", " ", 
+  RowBox[{"51174.58", " ", "doughs"}]}]}], "Input",
+ CellChangeTimes->{{3.760382363950802*^9, 3.7603824548904533`*^9}, {
+   3.760382498882658*^9, 3.7603825116290517`*^9}, {3.7603833996338434`*^9, 
+   3.7603834337768116`*^9}, {3.760383498089016*^9, 3.7603835062268333`*^9}, 
+   3.760635714110194*^9},ExpressionUUID->"4d4ee71a-b16a-4971-b949-\
+5378e7f39a52"],
+
+Cell[BoxData[
+ RowBox[{"dough", " ", "=", " ", 
+  RowBox[{
+  "3.25", " ", "*", " ", "120", " ", "*", " ", "0.00220462"}]}]], "Input",
+ CellChangeTimes->{{3.7603822914796343`*^9, 
+  3.7603823211194043`*^9}},ExpressionUUID->"24a968c7-65ef-4fcf-b6b7-\
+2317894a935f"],
+
+Cell[BoxData[
+ RowBox[{"0.859802", " ", "<", 
+  RowBox[{
+   RowBox[{"-", " ", "lbs"}], "/", "dough"}]}]], "Input",
+ CellChangeTimes->{{3.7606357440715413`*^9, 3.760635761114208*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"404ac491-e8b3-444a-a470-17597150fe84"],
+
+Cell[BoxData[
+ RowBox[{"sack", "=", " ", 
+  RowBox[{"50", "/", "dough"}]}]], "Input",
+ CellChangeTimes->{{3.760383436543205*^9, 3.7603834795309367`*^9}, 
+   3.7606357107621202`*^9},ExpressionUUID->"5a9684c9-b733-4f05-b823-\
+6b0dd5b2585c"],
+
+Cell[BoxData[
+ RowBox[{"58.1529", " ", "<", 
+  RowBox[{
+   RowBox[{"-", " ", "doughs"}], "/", "sack"}]}]], "Input",
+ CellChangeTimes->{{3.7606356839905877`*^9, 3.7606357082942*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"25b4e7f4-adfb-4c97-a651-23a5d8304996"],
+
+Cell[BoxData[
+ RowBox[{"truck", " ", "=", " ", 
+  RowBox[{"880", "*", " ", "sack"}]}]], "Input",
+ CellChangeTimes->{{3.76038246852329*^9, 3.760382478410181*^9}, {
+   3.760383492512225*^9, 3.760383493427185*^9}, 
+   3.760635717615301*^9},ExpressionUUID->"12f55a0b-6d73-4004-bca4-\
+4ee1b9245987"],
+
+Cell[BoxData[
+ RowBox[{"51174.5846", " ", "<", 
+  RowBox[{
+   RowBox[{"-", "doughs"}], " ", "/", " ", "truck"}]}]], "Input",
+ CellChangeTimes->{{3.760635720488493*^9, 3.7606357316645803`*^9}, {
+  3.7606359993421097`*^9, 3.760635999934121*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"4d72896c-6c57-4210-964c-63554f0ecc8d"],
+
+Cell[CellGroupData[{
+
+Cell["Indices and Data :  ", "Subsection",
+ CellChangeTimes->{{3.728568229414795*^9, 3.728568238645812*^9}, {
+  3.730896615044466*^9, 3.730896615155164*^9}, {3.7603801855203533`*^9, 
+  3.7603802128347163`*^9}, {3.760380316744357*^9, 
+  3.7603803563560085`*^9}},ExpressionUUID->"50e013fc-5688-46e8-8e07-\
+983c96d77789"],
+
+Cell[TextData[{
+ "m \[Epsilon] mills = [Ardent1, ..., ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"Ardent38", "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "221616b6-e4b6-410d-8cb7-fc8a78c56873"],
+ " \nd \[Epsilon] dcenters = [DC1, ..., ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"DC16", "]"}], "d"], TraditionalForm]],ExpressionUUID->
+  "2f7cb500-0b76-41a3-bff3-9873dbba012c"],
+ "\ncf \[Epsilon] distcost = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "distcost", "]"}], "d"], TraditionalForm]],ExpressionUUID->
+  "51d2782e-03b6-4ef3-a390-0902f969e251"],
+ " - in $/mile\ndem \[Epsilon] weeklydemand = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "weeklydemand", "]"}], "d"], TraditionalForm]],
+  ExpressionUUID->"c43b6a27-0022-4dd1-afa1-3ce3df6da91f"],
+ " - in doughs\nucf \[Epsilon] sackcost = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "unitcost", "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "057ffd6b-65a8-48a4-a1e1-93d4c2c04c5c"],
+ " -in $/sack\nsupply = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "supplycap", "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "e903689e-7b44-4f33-b73f-ccaa033ce702"],
+ " -in sacks\nmiles  = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "distance", "]"}], 
+    RowBox[{"m", ",", "d"}]], TraditionalForm]],ExpressionUUID->
+  "142548d4-6f55-4db1-a878-6248c9da1b20"],
+ "  -in miles\nstartcost = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "700000", "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "0a8ceb39-5bf6-48d2-8a49-d58b25a3fc9e"],
+ " - in $"
+}], "Text",
+ CellChangeTimes->{{3.728568229414795*^9, 3.728568238645812*^9}, {
+   3.730896615044466*^9, 3.730896615155164*^9}, {3.7603801855203533`*^9, 
+   3.7603802128347163`*^9}, {3.760380316744357*^9, 3.7603804507856884`*^9}, {
+   3.760380483226775*^9, 3.760380561592925*^9}, {3.760380592279826*^9, 
+   3.760380731769069*^9}, {3.7603808289119368`*^9, 3.7603808446246605`*^9}, {
+   3.7603812445700874`*^9, 3.760381358072878*^9}, {3.760381818424444*^9, 
+   3.760381903713781*^9}, {3.760382681541448*^9, 3.760382684597674*^9}, {
+   3.7603836660756283`*^9, 3.760383691536085*^9}, {3.7603845193618326`*^9, 
+   3.760384542513528*^9}, {3.7603849152693124`*^9, 3.760384916078003*^9}, 
+   3.760385056583679*^9, {3.7603855489124837`*^9, 3.7603855777660627`*^9}, {
+   3.76063560436588*^9, 3.760635649925186*^9}},
+ FontSize->18,ExpressionUUID->"3004576c-a040-4e38-ac09-cb6967e1d9c6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Decision Variables:", "Subsection",
+ CellChangeTimes->{{3.760380927962243*^9, 
+  3.760380936955018*^9}},ExpressionUUID->"194c8421-1262-4307-9d6e-\
+5daa94488141"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "m"], TraditionalForm]],ExpressionUUID->
+  "422dba73-2acf-4187-a122-935b7bed2b3e"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"{", GridBox[{
+      {
+       RowBox[{"1", ","}], 
+       RowBox[{"mill", " ", "is", " ", "open"}]},
+      {
+       RowBox[{"0", ","}], "otherwise"}
+     }], "}"}], TraditionalForm]],ExpressionUUID->
+  "d68c0bb9-996e-4057-bf75-3e02d69e9fad"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["K", 
+    RowBox[{"m", ",", "d"}]], TraditionalForm]],ExpressionUUID->
+  "72d65c93-61d4-4a22-bd90-ef7067d94ba8"],
+ "=",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"{", GridBox[{
+      {
+       RowBox[{"1", ","}], 
+       RowBox[{
+       "mill", " ", "sends", " ", "dough", " ", "to", " ", "dcenter"}]},
+      {
+       RowBox[{"0", ","}], "otherwise"}
+     }], "}"}], TraditionalForm]],ExpressionUUID->
+  "8b179441-1ae5-46e6-9651-2d1f57b7e306"]
+}], "Text",
+ CellChangeTimes->{{3.7603809435407248`*^9, 3.760380947075241*^9}, {
+  3.7603809932191024`*^9, 3.7603811270005956`*^9}, {3.7603812139350557`*^9, 
+  3.760381238144102*^9}, {3.7603813707145634`*^9, 3.760381477240665*^9}, {
+  3.760381937193082*^9, 3.760381937480317*^9}},
+ FontSize->18,ExpressionUUID->"665bc1e7-34a6-4014-a6ba-4278558623be"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Objective Function:", "Subsection",
+ CellChangeTimes->{{3.7603815597788*^9, 
+  3.76038156474749*^9}},ExpressionUUID->"1ff5c790-9ebc-40cb-8b65-\
+644aa8679534"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MIN", " ", 
+   RowBox[{
+    UnderscriptBox["\[Sum]", 
+     RowBox[{"m", " ", "\[Epsilon]", " ", "mills"}]], 
+    RowBox[{
+     UnderscriptBox["\[Sum]", 
+      RowBox[{" ", 
+       RowBox[{"d", " ", "\[Epsilon]", " ", "dcenters"}]}]], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "*", 
+         FractionBox[
+          RowBox[{
+           FractionBox[
+            SubscriptBox["dem", "d"], "58.1529"], "*", 
+           SubscriptBox["cf", "d"], "*", 
+           SubscriptBox["miles", 
+            RowBox[{"m", ",", "d"}]], " "}], "880"]}], "+", " ", 
+        RowBox[{
+         SubscriptBox["ucf", "m"], "*", 
+         FractionBox[
+          SubscriptBox["dem", "d"], "58.1529"]}]}], ")"}], "*", 
+      SubscriptBox["K", 
+       RowBox[{"b", ",", "d"}]]}]}]}]}], "+", 
+  RowBox[{
+   UnderscriptBox["\[Sum]", 
+    RowBox[{" ", 
+     RowBox[{"m", " ", "\[Epsilon]", " ", "mills"}]}]], 
+   RowBox[{
+    SubscriptBox["startcost", "m"], "*", 
+    SubscriptBox["y", "m"]}]}]}]], "Input",
+ CellChangeTimes->{{3.7603815717448435`*^9, 3.7603816663463264`*^9}, {
+  3.760381707919967*^9, 3.7603818148317966`*^9}, {3.7603818618765345`*^9, 
+  3.7603818656014223`*^9}, {3.7603819175765853`*^9, 3.76038192268414*^9}, {
+  3.760381965500871*^9, 3.7603819731093893`*^9}, {3.7603837842300177`*^9, 
+  3.7603837865791845`*^9}, {3.7603838206171265`*^9, 3.760383869322035*^9}, {
+  3.760383942300332*^9, 3.7603839436986437`*^9}, {3.760383978354381*^9, 
+  3.760384024898505*^9}, {3.760384576869484*^9, 3.7603846037726974`*^9}, {
+  3.760384938253679*^9, 3.7603849396651435`*^9}, {3.7603852407988777`*^9, 
+  3.7603852569119377`*^9}, {3.760633483068591*^9, 3.7606334936988716`*^9}, {
+  3.7608238339576874`*^9, 3.7608238404410048`*^9}},
+ FontSize->18,ExpressionUUID->"5a719f1c-7d29-4f06-a2dd-6155e207b999"],
+
+Cell["\<\
+Sum of the truck(s) traveling from distribution center to mill and back, mill \
+producing sacks of flour at a cost per sack to put on trucks, and the \
+retooling cost for putting each mill which is put into operation. This is \
+weekly cost including start up costs.\
+\>", "Text",
+ CellChangeTimes->{{3.7603849721563296`*^9, 3.7603850478704796`*^9}, {
+  3.760635574479374*^9, 3.760635591282316*^9}, {3.7606361170742283`*^9, 
+  3.760636117333519*^9}},ExpressionUUID->"95567887-019b-4da2-a6f9-\
+4fadc1a4507b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ST:", "Subsection",
+ CellChangeTimes->{{3.76038420634787*^9, 
+  3.7603842080523615`*^9}},ExpressionUUID->"6166ac2d-6ae1-4642-a8bd-\
+2e41d44e8f64"],
+
+Cell[CellGroupData[{
+
+Cell["1) DC served by single Mill", "Subsubsection",
+ CellChangeTimes->{{3.760384218755746*^9, 3.760384246970132*^9}, {
+  3.760384364344872*^9, 
+  3.7603843806041613`*^9}},ExpressionUUID->"3ecfca59-53d5-4a88-8daf-\
+f1fdc64f5534"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["\[Sum]", 
+     RowBox[{" ", 
+      RowBox[{"m", " ", "\[Epsilon]", " ", "mills"}]}]], 
+    SubscriptBox["K", 
+     RowBox[{"m", ",", "d"}]]}], "=", "1"}], ";", " ", 
+  RowBox[{"\[ForAll]", " ", 
+   RowBox[{"d", " ", "\[Epsilon]", " ", "dcenters"}]}]}]], "Input",
+ CellChangeTimes->{{3.760384273236145*^9, 3.760384299786434*^9}, {
+  3.7603843310603013`*^9, 3.760384352491031*^9}},
+ FontSize->18,ExpressionUUID->"6ebbd237-5458-4e4e-907d-f97a450597f3"],
+
+Cell["A distribution center can only be served by a single mill.", "Text",
+ CellChangeTimes->{{3.760385071706763*^9, 
+  3.7603850874345026`*^9}},ExpressionUUID->"244abd61-413b-4d9a-9198-\
+ba1e59c8bfb3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2) Mills supply less than SupplyCap:", "Subsubsection",
+ CellChangeTimes->{{3.760384355227062*^9, 3.7603843884818707`*^9}, {
+  3.760384462818859*^9, 
+  3.760384471387803*^9}},ExpressionUUID->"72744e77-645c-46ce-8a8d-\
+c4f8f04c0d0d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["\[Sum]", 
+     RowBox[{" ", 
+      RowBox[{"d", " ", "\[Epsilon]", " ", "dcenters"}]}]], 
+    RowBox[{
+     SubscriptBox["K", 
+      RowBox[{"m", ",", "d"}]], "*", 
+     FractionBox[
+      SubscriptBox["dem", "d"], "58.1529"]}]}], "  ", "\[LessEqual]", " ", 
+   RowBox[{
+    SubscriptBox["supply", "m"], "*", 
+    SubscriptBox["y", "m"]}]}], ";", 
+  RowBox[{"\[ForAll]", 
+   RowBox[{"m", " ", "\[Epsilon]", " ", "mills", " "}]}]}]], "Input",
+ CellChangeTimes->{{3.760384426068883*^9, 3.760384436141265*^9}, {
+  3.7603844826768875`*^9, 3.7603845116604624`*^9}, {3.7603847071693*^9, 
+  3.760384786963609*^9}, {3.7603851085324955`*^9, 3.7603851183062935`*^9}, {
+  3.7606346039328547`*^9, 3.7606346072425795`*^9}},
+ FontSize->18,ExpressionUUID->"3e6ee4e3-8548-4093-8e25-547a90b9326f"],
+
+Cell["\<\
+A mill cannot supply more than their supply cap (in sacks) to all \
+distribution centers (a single one in this case) per week.\
+\>", "Text",
+ CellChangeTimes->{{3.7603850938133*^9, 3.7603851614267817`*^9}, {
+  3.760635520914487*^9, 
+  3.7606355309120045`*^9}},ExpressionUUID->"0c240524-5555-45c9-b334-\
+6b9dbc87544a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1117},
+WindowMargins->{{1912, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+Magnification:>1.6 Inherited,
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 511, 8, 155, "Title",ExpressionUUID->"b3e566a3-cd56-48c6-a278-fa2a36e0abad"],
+Cell[CellGroupData[{
+Cell[1116, 34, 583, 11, 183, "Chapter",ExpressionUUID->"de9daf93-d56a-49cf-ad6b-2d321b77242c"],
+Cell[CellGroupData[{
+Cell[1724, 49, 295, 5, 106, "Section",ExpressionUUID->"04ae38aa-fbbc-47ce-8ac3-5226f71a17e4"],
+Cell[2022, 56, 968, 23, 136, "Input",ExpressionUUID->"4d4ee71a-b16a-4971-b949-5378e7f39a52"],
+Cell[2993, 81, 263, 6, 45, "Input",ExpressionUUID->"24a968c7-65ef-4fcf-b6b7-2317894a935f"],
+Cell[3259, 89, 278, 6, 71, "Input",ExpressionUUID->"404ac491-e8b3-444a-a470-17597150fe84"],
+Cell[3540, 97, 238, 5, 45, "Input",ExpressionUUID->"5a9684c9-b733-4f05-b823-6b0dd5b2585c"],
+Cell[3781, 104, 277, 6, 71, "Input",ExpressionUUID->"25b4e7f4-adfb-4c97-a651-23a5d8304996"],
+Cell[4061, 112, 294, 6, 45, "Input",ExpressionUUID->"12f55a0b-6d73-4004-bca4-4ee1b9245987"],
+Cell[4358, 120, 339, 7, 71, "Input",ExpressionUUID->"4d72896c-6c57-4210-964c-63554f0ecc8d"],
+Cell[CellGroupData[{
+Cell[4722, 131, 318, 5, 85, "Subsection",ExpressionUUID->"50e013fc-5688-46e8-8e07-983c96d77789"],
+Cell[5043, 138, 2512, 63, 358, "Text",ExpressionUUID->"3004576c-a040-4e38-ac09-cb6967e1d9c6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7592, 206, 167, 3, 85, "Subsection",ExpressionUUID->"194c8421-1262-4307-9d6e-5daa94488141"],
+Cell[7762, 211, 1272, 39, 165, "Text",ExpressionUUID->"665bc1e7-34a6-4014-a6ba-4278558623be"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9071, 255, 164, 3, 85, "Subsection",ExpressionUUID->"1ff5c790-9ebc-40cb-8b65-644aa8679534"],
+Cell[9238, 260, 1835, 44, 128, "Input",ExpressionUUID->"5a719f1c-7d29-4f06-a2dd-6155e207b999"],
+Cell[11076, 306, 516, 9, 91, "Text",ExpressionUUID->"95567887-019b-4da2-a6f9-4fadc1a4507b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11629, 320, 152, 3, 85, "Subsection",ExpressionUUID->"6166ac2d-6ae1-4642-a8bd-2e41d44e8f64"],
+Cell[CellGroupData[{
+Cell[11806, 327, 229, 4, 70, "Subsubsection",ExpressionUUID->"3ecfca59-53d5-4a88-8daf-f1fdc64f5534"],
+Cell[12038, 333, 516, 13, 91, "Input",ExpressionUUID->"6ebbd237-5458-4e4e-907d-f97a450597f3"],
+Cell[12557, 348, 202, 3, 55, "Text",ExpressionUUID->"244abd61-413b-4d9a-9198-ba1e59c8bfb3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12796, 356, 238, 4, 70, "Subsubsection",ExpressionUUID->"72744e77-645c-46ce-8a8d-c4f8f04c0d0d"],
+Cell[13037, 362, 847, 21, 106, "Input",ExpressionUUID->"3e6ee4e3-8548-4093-8e25-547a90b9326f"],
+Cell[13887, 385, 327, 7, 55, "Text",ExpressionUUID->"0c240524-5555-45c9-b334-6b9dbc87544a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

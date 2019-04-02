@@ -1,0 +1,30 @@
+# Solution for model model name
+# Objective value = 2094875
+Slot(NB,1) 0
+Slot(DR,1) 150
+Slot(DOLR,1) 0
+Slot(GP,1) 0
+Slot(HDD,1) 0
+Slot(ML,1) 0
+Slot(BJK,1) 1.3636363636363637e+02
+Slot(NB,2) 200
+Slot(DR,2) 0
+Slot(DOLR,2) 0
+Slot(GP,2) 0
+Slot(HDD,2) 125
+Slot(ML,2) 40.625
+Slot(BJK,2) 0
+Slot(NB,3) 0
+Slot(DR,3) 0
+Slot(DOLR,3) 39.6875
+Slot(GP,3) 2.7045454545454543e+01
+Slot(HDD,3) 0
+Slot(ML,3) 59.375
+Slot(BJK,3) 0
+Slot(NB,4) 0
+Slot(DR,4) 0
+Slot(DOLR,4) 60.3125
+Slot(GP,4) 0
+Slot(HDD,4) 0
+Slot(ML,4) 0
+Slot(BJK,4) 1.1363636363636363e+02

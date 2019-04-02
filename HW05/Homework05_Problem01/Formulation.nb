@@ -1,0 +1,370 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14716,        362]
+NotebookOptionsPosition[     12629,        313]
+NotebookOutlinePosition[     13159,        334]
+CellTagsIndexPosition[     13116,        331]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[" "], "Input",
+ CellChangeTimes->{
+  3.762028386530749*^9},ExpressionUUID->"0df8ffad-6f08-4f9d-9b99-\
+8d68d1d63b2b"],
+
+Cell[CellGroupData[{
+
+Cell["HW#5 ", "Title",
+ CellChangeTimes->{{3.726151371909917*^9, 3.7261513868767447`*^9}, {
+  3.7267555042256317`*^9, 3.7267555044312105`*^9}, {3.7271981285046387`*^9, 
+  3.727198128597793*^9}, {3.7285681984846044`*^9, 3.7285681986142797`*^9}, {
+  3.7310075990462046`*^9, 3.7310075991649885`*^9}, {3.731612391632927*^9, 
+  3.7316123917567525`*^9}, {3.7349792000777054`*^9, 3.7349792008277817`*^9}, {
+  3.7603801674569254`*^9, 3.7603801721543984`*^9}, {3.761231565779129*^9, 
+  3.761231566531622*^9}},ExpressionUUID->"0b1aba1c-ddc3-4fcf-91d8-\
+e44452e2d891"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+3/19/2019
+William Ermlick \
+\>", "Chapter",
+ CellChangeTimes->{{3.7261513899729776`*^9, 3.7261513973565845`*^9}, {
+  3.7267555077530155`*^9, 3.726755509759369*^9}, {3.7271981326635337`*^9, 
+  3.727198132774472*^9}, {3.728568201752822*^9, 3.7285682023959265`*^9}, {
+  3.731007605670244*^9, 3.7310076077899227`*^9}, {3.731612396772732*^9, 
+  3.731612396924741*^9}, {3.7349792057099347`*^9, 3.7349792081542063`*^9}, {
+  3.7603801766557245`*^9, 3.760380182546444*^9}, {3.7603808892808547`*^9, 
+  3.7603809066101475`*^9}, {3.761231568259634*^9, 
+  3.7612315688111753`*^9}},ExpressionUUID->"c08de3f9-9d34-4469-b8ed-\
+70464da201d7"],
+
+Cell[CellGroupData[{
+
+Cell["#1", "Section",
+ CellChangeTimes->{{3.728568229414795*^9, 3.728568238645812*^9}, {
+  3.730896615044466*^9, 3.730896615155164*^9}, {3.7603801855203533`*^9, 
+  3.7603802128347163`*^9}, {3.760380316744357*^9, 
+  3.760380334308654*^9}},ExpressionUUID->"489ed043-81e0-4092-af1a-\
+c2e220c0887a"],
+
+Cell[CellGroupData[{
+
+Cell["Indices and Data :  ", "Subsection",
+ CellChangeTimes->{{3.728568229414795*^9, 3.728568238645812*^9}, {
+  3.730896615044466*^9, 3.730896615155164*^9}, {3.7603801855203533`*^9, 
+  3.7603802128347163`*^9}, {3.760380316744357*^9, 
+  3.7603803563560085`*^9}},ExpressionUUID->"7cf1feca-c70e-462a-95e2-\
+bc29d041ffc3"],
+
+Cell[TextData[{
+ "m \[Epsilon] month = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{"1", ",", 
+      RowBox[{"...", "12"}]}], "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "84df0a34-6b08-45cf-8bf9-b1e810fc6542"],
+ " \nd \[Epsilon] demand = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{"dem1", ",", 
+      RowBox[{"...", "dem12"}]}], "]"}], "m"], TraditionalForm]],
+  ExpressionUUID->"19177e4b-bc47-484a-8e06-cb0821343b67"],
+ "\nSP > sellprice = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "sellprice", "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "51d2782e-03b6-4ef3-a390-0902f969e251"],
+ " - in $\nCP > calveprice = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "calveprice", "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "c43b6a27-0022-4dd1-afa1-3ce3df6da91f"],
+ " - in $/year\nP > calvingproduction = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "calvingproduction", "]"}], 
+    RowBox[{"calfmonth", ",", "producemonth"}]], TraditionalForm]],
+  ExpressionUUID->"057ffd6b-65a8-48a4-a1e1-93d4c2c04c5c"],
+ " -in gallons/calved cow\nZ > days per month = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox[
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"31", "..."}], ".31"}], "]"}], "m"], " ", "-", " ", 
+    RowBox[{"in", " ", "days", " ", "per", " ", "month"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "816d3565-0191-4374-a338-abea192deb35"]
+}], "Text",
+ CellChangeTimes->{{3.728568229414795*^9, 3.728568238645812*^9}, {
+   3.730896615044466*^9, 3.730896615155164*^9}, {3.7603801855203533`*^9, 
+   3.7603802128347163`*^9}, {3.760380316744357*^9, 3.7603804507856884`*^9}, {
+   3.760380483226775*^9, 3.760380561592925*^9}, {3.760380592279826*^9, 
+   3.760380731769069*^9}, {3.7603808289119368`*^9, 3.7603808446246605`*^9}, {
+   3.7603812445700874`*^9, 3.760381358072878*^9}, {3.760381818424444*^9, 
+   3.760381903713781*^9}, {3.760382681541448*^9, 3.760382684597674*^9}, {
+   3.7603836660756283`*^9, 3.760383691536085*^9}, {3.7603845193618326`*^9, 
+   3.760384542513528*^9}, {3.7603849152693124`*^9, 3.760384916078003*^9}, 
+   3.760385056583679*^9, {3.7603855489124837`*^9, 3.7603855777660627`*^9}, {
+   3.76063560436588*^9, 3.760635649925186*^9}, {3.7612300285741587`*^9, 
+   3.761230270335244*^9}, {3.761230311420743*^9, 3.7612303295742064`*^9}, {
+   3.76123040856826*^9, 3.7612304410912175`*^9}, {3.761230608111162*^9, 
+   3.7612306170861797`*^9}, {3.7612340152010937`*^9, 3.7612340163215*^9}, {
+   3.7620411724575653`*^9, 3.7620412010339737`*^9}, {3.762041241993736*^9, 
+   3.762041271972148*^9}},
+ FontSize->18,ExpressionUUID->"df857564-5cf9-4c17-99a3-6528450afacc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Decision Variables:", "Subsection",
+ CellChangeTimes->{{3.760380927962243*^9, 
+  3.760380936955018*^9}},ExpressionUUID->"00b35575-c7b4-4934-8d1d-\
+ff0b844f349c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["X", "m"], TraditionalForm]],ExpressionUUID->
+  "422dba73-2acf-4187-a122-935b7bed2b3e"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{"[", "cowscalved", "]"}], "m"], TraditionalForm]],ExpressionUUID->
+  "c8263b28-de16-4a94-b33b-09d0894d509d"],
+ " -in cows calved in month \[OpenCurlyQuote]m\[CloseCurlyQuote]\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["E", "d"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "22b43f74-033f-4871-b661-1943a5f7a38b"],
+ "= excess of demand of milk in month \[OpenCurlyQuote]m\[CloseCurlyQuote]\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "d"], "=", " ", 
+    RowBox[{
+    "shortage", " ", "of", " ", "demand", " ", "of", " ", "mil", " ", "in", 
+     " ", 
+     RowBox[{"month", " ", "'"}], 
+     RowBox[{"m", "'"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "120eaf21-4a3e-42c8-87fc-593a2bdf98d0"]
+}], "Text",
+ CellChangeTimes->{{3.7603809435407248`*^9, 3.760380947075241*^9}, {
+  3.7603809932191024`*^9, 3.7603811270005956`*^9}, {3.7603812139350557`*^9, 
+  3.760381238144102*^9}, {3.7603813707145634`*^9, 3.760381477240665*^9}, {
+  3.760381937193082*^9, 3.760381937480317*^9}, {3.7612302757574973`*^9, 
+  3.7612303019648385`*^9}, {3.761230357413037*^9, 3.761230358580984*^9}, {
+  3.762038227402916*^9, 3.762038275996602*^9}},
+ FontSize->18,ExpressionUUID->"ed1c404b-6d77-4ffd-81c7-51f85647f5d9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Objective Function:", "Subsection",
+ CellChangeTimes->{{3.7603815597788*^9, 
+  3.76038156474749*^9}},ExpressionUUID->"f90e38c2-c500-4dcb-b040-\
+c5eaf1e4bc01"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MIN", " ", 
+   RowBox[{
+    UnderscriptBox["\[Sum]", 
+     RowBox[{"m", " ", "\[Epsilon]", " ", "months"}]], 
+    RowBox[{
+     SubscriptBox["CP", "m"], "*", 
+     SubscriptBox["X", "m"]}]}]}], " ", "+", " ", 
+  RowBox[{
+   UnderscriptBox["\[Sum]", 
+    RowBox[{"d", " ", "\[Epsilon]", " ", "months"}]], 
+   RowBox[{
+    SubscriptBox["SP", "d"], "*", 
+    SubscriptBox["S", "d"]}]}], "+", 
+  RowBox[{
+   UnderscriptBox["\[Sum]", 
+    RowBox[{"d", " ", "\[Epsilon]", " ", "months"}]], 
+   RowBox[{"0.2", "*", 
+    SubscriptBox["SP", "d"], "*", 
+    SubscriptBox["E", "d"]}]}]}]], "Input",
+ CellChangeTimes->{{3.7603815717448435`*^9, 3.7603816663463264`*^9}, {
+   3.760381707919967*^9, 3.7603818148317966`*^9}, {3.7603818618765345`*^9, 
+   3.7603818656014223`*^9}, {3.7603819175765853`*^9, 3.76038192268414*^9}, {
+   3.760381965500871*^9, 3.7603819731093893`*^9}, {3.7603837842300177`*^9, 
+   3.7603837865791845`*^9}, {3.7603838206171265`*^9, 3.760383869322035*^9}, {
+   3.760383942300332*^9, 3.7603839436986437`*^9}, {3.760383978354381*^9, 
+   3.760384024898505*^9}, {3.760384576869484*^9, 3.7603846037726974`*^9}, {
+   3.760384938253679*^9, 3.7603849396651435`*^9}, {3.7603852407988777`*^9, 
+   3.7603852569119377`*^9}, {3.760633483068591*^9, 3.7606334936988716`*^9}, {
+   3.7608238339576874`*^9, 3.7608238404410048`*^9}, {3.7612303349413843`*^9, 
+   3.7612303837970433`*^9}, {3.7612304532043915`*^9, 
+   3.7612305452519655`*^9}, {3.761230586845955*^9, 3.7612306715330877`*^9}, {
+   3.7612308011849775`*^9, 3.7612308015362167`*^9}, {3.7612311113698745`*^9, 
+   3.761231113149555*^9}, {3.7612381825388885`*^9, 3.761238182811186*^9}, {
+   3.761421838105645*^9, 3.761421851362549*^9}, {3.762038284387758*^9, 
+   3.7620383411448984`*^9}, 3.762041231631926*^9, {3.7620412809373517`*^9, 
+   3.76204128377643*^9}, 3.762041318336383*^9},
+ FontSize->18,ExpressionUUID->"0d4b21f0-a4a6-4687-8919-f56d0780b336"],
+
+Cell["\<\
+Sum of the yearly cost to feed the number of cows calved in all months of the \
+year plus the money lost due to a shortage of milk produced in all months \
+plus the money lost due to the surplus of milk produced in all months. Sum of \
+all start up costs and revenue losses due to choices in production, amount of \
+excess, and amount of shortage.\
+\>", "Text",
+ CellChangeTimes->{{3.7603849721563296`*^9, 3.7603850478704796`*^9}, {
+  3.760635574479374*^9, 3.760635591282316*^9}, {3.7606361170742283`*^9, 
+  3.760636117333519*^9}, {3.7612306789490905`*^9, 3.76123075062976*^9}, {
+  3.7612308133908005`*^9, 3.761230862189973*^9}, {3.761230906887534*^9, 
+  3.761230937588132*^9}, {3.762038429982312*^9, 3.762038432461116*^9}, {
+  3.762038473157153*^9, 3.762038511790722*^9}, {3.762040951361812*^9, 
+  3.7620409852424912`*^9}},ExpressionUUID->"18c0d6f2-a373-428c-97e7-\
+b2a400b57069"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ST:", "Subsection",
+ CellChangeTimes->{{3.76038420634787*^9, 
+  3.7603842080523615`*^9}},ExpressionUUID->"8eade640-0925-4d95-846b-\
+2bc0a62287cb"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+1) Ensure that the total milk produced, the excess, and the shortage all \
+combine to equal the monthly demand:\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.760384218755746*^9, 3.760384246970132*^9}, {
+  3.760384364344872*^9, 3.7603843806041613`*^9}, {3.7612309895796366`*^9, 
+  3.76123099229976*^9}, {3.762039037483532*^9, 3.7620390442897625`*^9}, {
+  3.7620391287595477`*^9, 3.7620391527235966`*^9}, {3.762040306610474*^9, 
+  3.7620403383056297`*^9}, {3.762040379722947*^9, 3.762040388423442*^9}, {
+  3.762040932864153*^9, 3.762040934063142*^9}, {3.7620432660552607`*^9, 
+  3.762043311840617*^9}, {3.7620435647003374`*^9, 
+  3.762043579969494*^9}},ExpressionUUID->"c098a84e-3e75-41f8-a6ea-\
+c1c66465a757"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["\[Sum]", 
+      RowBox[{" ", 
+       RowBox[{"m", " ", "\[Epsilon]", " ", "months"}]}]], 
+     RowBox[{
+      SubscriptBox["X", "m"], "*", 
+      SubscriptBox["P", 
+       RowBox[{"d", ",", "m"}]], "*", 
+      SubscriptBox["Z", "m"]}]}], " ", "-", 
+    SubscriptBox["E", "d"], "+", 
+    SubscriptBox["S", "d"]}], "\[Equal]", " ", 
+   SubscriptBox["dem", "d"]}], ";", " ", 
+  RowBox[{"\[ForAll]", " ", 
+   RowBox[{"d", " ", "\[Epsilon]", " ", "months"}]}]}]], "Input",
+ CellChangeTimes->{{3.760384273236145*^9, 3.760384299786434*^9}, {
+  3.7603843310603013`*^9, 3.760384352491031*^9}, {3.7612309985161123`*^9, 
+  3.7612310401485815`*^9}, {3.7620383980782723`*^9, 3.762038413352558*^9}, {
+  3.7620394176731396`*^9, 3.762039418252071*^9}, {3.7620395357373343`*^9, 
+  3.762039536133724*^9}, {3.7620412899124336`*^9, 3.7620412934217935`*^9}, {
+  3.7620419727904654`*^9, 3.7620419729734683`*^9}},
+ FontSize->18,ExpressionUUID->"0ac22e5b-48e4-4fe7-a72d-903a8f841be2"],
+
+Cell["\<\
+All cows calved in all months m must produce a total amount of milk, which \
+minus the excess and plus the shortage meets the monthly demand. The \
+production, excess, and shortage must all combine to equal the monthly demand.\
+\>", "Text",
+ CellChangeTimes->{{3.760385071706763*^9, 3.7603850874345026`*^9}, {
+  3.761231048955699*^9, 3.7612310850993176`*^9}, {3.7620391949230475`*^9, 
+  3.7620392373256407`*^9}, {3.762043331243699*^9, 
+  3.762043390875228*^9}},ExpressionUUID->"8adf1fb9-ec96-43aa-8ed1-\
+17929ba4b888"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1117},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+Magnification:>1.4 Inherited,
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 129, 3, 40, "Input",ExpressionUUID->"0df8ffad-6f08-4f9d-9b99-8d68d1d63b2b"],
+Cell[CellGroupData[{
+Cell[712, 27, 557, 8, 135, "Title",ExpressionUUID->"0b1aba1c-ddc3-4fcf-91d8-e44452e2d891"],
+Cell[CellGroupData[{
+Cell[1294, 39, 635, 12, 161, "Chapter",ExpressionUUID->"c08de3f9-9d34-4469-b8ed-70464da201d7"],
+Cell[CellGroupData[{
+Cell[1954, 55, 295, 5, 92, "Section",ExpressionUUID->"489ed043-81e0-4092-af1a-c2e220c0887a"],
+Cell[CellGroupData[{
+Cell[2274, 64, 318, 5, 75, "Subsection",ExpressionUUID->"7cf1feca-c70e-462a-95e2-bc29d041ffc3"],
+Cell[2595, 71, 2743, 64, 238, "Text",ExpressionUUID->"df857564-5cf9-4c17-99a3-6528450afacc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5375, 140, 167, 3, 75, "Subsection",ExpressionUUID->"00b35575-c7b4-4934-8d1d-ff0b844f349c"],
+Cell[5545, 145, 1482, 36, 122, "Text",ExpressionUUID->"ed1c404b-6d77-4ffd-81c7-51f85647f5d9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7064, 186, 164, 3, 75, "Subsection",ExpressionUUID->"f90e38c2-c500-4dcb-b040-c5eaf1e4bc01"],
+Cell[7231, 191, 1934, 38, 80, "Input",ExpressionUUID->"0d4b21f0-a4a6-4687-8919-f56d0780b336"],
+Cell[9168, 231, 891, 14, 80, "Text",ExpressionUUID->"18c0d6f2-a373-428c-97e7-b2a400b57069"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10096, 250, 152, 3, 75, "Subsection",ExpressionUUID->"8eade640-0925-4d95-846b-2bc0a62287cb"],
+Cell[CellGroupData[{
+Cell[10273, 257, 717, 12, 62, "Subsubsection",ExpressionUUID->"c098a84e-3e75-41f8-a6ea-c1c66465a757"],
+Cell[10993, 271, 1041, 24, 80, "Input",ExpressionUUID->"0ac22e5b-48e4-4fe7-a72d-903a8f841be2"],
+Cell[12037, 297, 528, 9, 80, "Text",ExpressionUUID->"8adf1fb9-ec96-43aa-8ed1-17929ba4b888"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
