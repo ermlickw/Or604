@@ -131,7 +131,7 @@ NFLmodel.update()
 moutainwestteams = ['LAC','SF','SEA','OAK','LAR','DEN','ARI']
 for w in [1]:
     cName = '10b_MONN_HOMETEAM_wk_%s' % (w)
-    myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n,q] for a,h,w,s,n,q in season.select('*',moutainwestteams,w,'MONN','*','*'))== 1, name=cName)
+    myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n,q] for a,h,w,s,n,q in season.select('*',moutainwestteams,w,'MONN','*','*'))>= 1, name=cName)
 NFLmodel.update()
 
 #10c one monday night game in weeks 2-16 and none in week 17
