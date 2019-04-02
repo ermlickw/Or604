@@ -129,7 +129,7 @@ NFLmodel.update()
 
 #10b One of the monday night games in week 1 is hosted by a team on the west cost or in moutain time
 moutainwestteams = ['LAC','SF','SEA','OAK','LAR','DEN','ARI']
-for w in range(1,1):
+for w in [1]:
     cName = '10b_MONN_HOMETEAM_wk_%s' % (w)
     myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n,q] for a,h,w,s,n,q in season.select('*',moutainwestteams,w,'MONN','*','*'))== 1, name=cName)
 NFLmodel.update()
