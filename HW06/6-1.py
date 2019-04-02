@@ -155,12 +155,16 @@ NFLmodel.write('test.lp')
 # NFLmodel.setParam('MIPGap',0.0001)
 
 #solve:
+# GRBRead(myModel, fullPathToMSTFile) #WARM MST PRELOAD
+
 NFLmodel.optimize()
 
 ##Results:
 #if its converged optimal:
 if NFLmodel.Status == grb.GRB.OPTIMAL:
     NFLmodel.write('solution.sol') #write the solution to file
+    NFLmodel.write('solution.mst') #write the solution to file
+
     #make DB and write output
     conn = sqlite3.connect('NFL.db')
     c = conn.cursor()
@@ -195,7 +199,8 @@ elif NFLmodel.Status == grb.GRB.INFEASIBLE:
 elif NFLmodel.Status == grb.GRB.TIME_LIMIT or grb.GRB.SUBOPTIMAL:
     print("Time limit reached...Writing non-optimal solution")
     NFLmodel.write('solution.sol')
+    NFLmodel.write('solution.mst') 
 
 else:
-    print('What Happened? Sub optimal?')
+    print('What Happened? Not Sub optimal and Not Infesible and Not Optimal. HALP')
 
