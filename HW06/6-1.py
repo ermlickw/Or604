@@ -72,12 +72,12 @@ NFLmodel.update()
 
 #06 ONE THUN for weeks 1-15
 for w in range(1,18):
-    if not(w == 16 or w == 17):
-        cName = '06_one_thursdaynights_week_%s' % (w)
-        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n,q] for a,h,w,s,n,q in season.select('*','*',w,'THUN','*','*'))== 1, name=cName)
     if w == 16 or w == 17: #none in 16 or 17
         cName = '06_no_thursdaynights_week_%s' % (w)
-        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n,q] for a,h,w,s,n,q in season.select('*','*',w,'THUN','*','*'))== 0, name=cName)    
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n,q] for a,h,w,s,n,q in season.select('*','*',w,'THUN','*','*'))== 0, name=cName)
+    else:
+        cName = '06_one_thursdaynights_week_%s' % (w)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n,q] for a,h,w,s,n,q in season.select('*','*',w,'THUN','*','*'))== 1, name=cName)    
 NFLmodel.update()
 
 #07 two SATE and SATL in weeks 15 and 16
