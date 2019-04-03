@@ -144,8 +144,8 @@ for w in range(2,18):
         myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*','*',w,'MONN','*'))== 0, name=cName)
 NFLmodel.update()
 
+####TODO
 #11 no more than 4 home games in a row
-
 for t in teams:
     for i in range(1,15):
         wk=[w for w in range(i,i+4)]
@@ -160,6 +160,7 @@ for t in teams:
     for w in range(1,18):
         cName = '12_thursdaytimezone_%s_%s' % (w,t)
         myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,'THUN','*') if abs(teams[t][2]-teams[h][2])>=2) ==0, name=cName)
+
 #2 home in 6 and 2 away in 6
 for t in teams:
     for i in range(1,13):
@@ -175,7 +176,7 @@ NFLmodel.update()
 #     for w in range(1,16):
 #     cName = '14_four_away_row_windowstart_%s_%s' % (i,t)
 #     myConstrs[cName] = NFLmodel.addConstr(games[t,'BYE',w-1,'SUNB','BYE'] + grb.quicksum( games[t,h,w,s,n] for t,h,w,s,n in season.select('t','*',w,thursdayslots,'*')+games[a,t,w,s,n] for a,t,w,s,n in season.select('*',t,w,thursdayslots,'*'))<=1, name=cName)
-# NFLmodel.update()                                        
+# NFLmodel.update()                           
 
 NFLmodel.update()
 #check if proper formulation
@@ -208,8 +209,7 @@ if NFLmodel.Status == grb.GRB.OPTIMAL:
                     Home text,
                     Week int,
                     Slot text,
-                    Network text,
-                    Quality int)''' %
+                    Network text)''' %
                     (table_name))
     except:
         c.execute("Delete from %s" % (table_name)) #delete table data if already created
@@ -218,7 +218,7 @@ if NFLmodel.Status == grb.GRB.OPTIMAL:
     for key, value in games.items():
         if value.x>0:
             insert = list(key)
-            c.executemany('insert into %s values (?,?,?,?,?,?)' % (table_name), (insert,))
+            c.executemany('insert into %s values (?,?,?,?,?)' % (table_name), (insert,))
     conn.commit()
     #print count
     c.execute('select count(*) from %s'% (table_name))
