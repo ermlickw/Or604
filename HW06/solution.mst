@@ -1,5 +1,4 @@
-# Solution for model NFL model
-# Objective value = 1066.5
+# MIP start
 GAME(BUF)v(NE)slt(MONN)wk(1)on(ESP) 0
 GAME(BUF)v(NE)slt(SUNN)wk(1)on(NBC) 0
 GAME(BUF)v(NE)slt(THUN)wk(1)on(NBC) 0
