@@ -9358,3 +9358,116 @@ Solution count 3: 1070 1069 1068
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.070000000000e+03, best bound 1.070000000000e+03, gap 0.0000%
+
+Gurobi 8.1.0 (win64, Python) logging started 04/12/19 19:32:28
+
+Academic license - for non-commercial use only
+Optimize a model with 13053 rows, 20010 columns and 598376 nonzeros
+Variable types: 0 continuous, 20010 integer (20010 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 5746 rows and 5395 columns
+Presolve time: 0.70s
+Presolved: 7307 rows, 14615 columns, 401679 nonzeros
+Variable types: 0 continuous, 14615 integer (14615 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   11429    1.0699313e+03   1.740322e+02   0.000000e+00      5s
+   12745    1.0700000e+03   0.000000e+00   0.000000e+00      6s
+
+Root relaxation: objective 1.070000e+03, 12745 iterations, 4.86 seconds
+Total elapsed time = 12.82s
+Total elapsed time = 19.08s
+Total elapsed time = 25.85s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1070.00000    0  786          - 1070.00000      -     -   30s
+     0     0 1070.00000    0  949          - 1070.00000      -     -   33s
+     0     0 1070.00000    0  923          - 1070.00000      -     -   34s
+     0     0          -    0               - 1070.00000      -     -   37s
+
+Cutting planes:
+  Cover: 2
+  Clique: 59
+  MIR: 7
+  GUB cover: 1
+
+Explored 1 nodes (68985 simplex iterations) in 37.06 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 0
+
+Solve interrupted
+Best objective -, best bound 1.070000000000e+03, gap -
+
+Gurobi 8.1.0 (win64, Python) logging started 04/12/19 19:52:02
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.0 (win64, Python) logging started 04/12/19 19:52:32
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.0 (win64, Python) logging started 04/12/19 19:53:09
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.0 (win64, Python) logging started 04/12/19 19:53:38
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.0 (win64, Python) logging started 04/12/19 19:54:11
+
+Academic license - for non-commercial use only
+Optimize a model with 14109 rows, 20714 columns and 663802 nonzeros
+Variable types: 0 continuous, 20714 integer (20714 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 5746 rows and 5395 columns
+Presolve time: 0.90s
+Presolved: 8363 rows, 15319 columns, 452537 nonzeros
+Variable types: 0 continuous, 15319 integer (15319 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   10825    1.0939995e+03   1.236433e+05   0.000000e+00      5s
+   18175    1.0700000e+03   0.000000e+00   0.000000e+00      9s
+
+Root relaxation: objective 1.070000e+03, 18175 iterations, 8.12 seconds
+Total elapsed time = 18.41s
+Total elapsed time = 27.09s
+Total elapsed time = 34.17s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1070.00000    0  912          - 1070.00000      -     -   38s
+     0     0 1070.00000    0  989          - 1070.00000      -     -   43s
+     0     0 1070.00000    0  916          - 1070.00000      -     -   80s
+     0     0 1070.00000    0  874          - 1070.00000      -     -   80s
+     0     0 1070.00000    0  873          - 1070.00000      -     -  100s
+     0     0 1070.00000    0  904          - 1070.00000      -     -  101s
+     0     0 1070.00000    0  831          - 1070.00000      -     -  138s
+     0     0 1070.00000    0  889          - 1070.00000      -     -  139s
+     0     0 1070.00000    0  773          - 1070.00000      -     -  183s
+     0     0 1070.00000    0  925          - 1070.00000      -     -  184s
+     0     0 1070.00000    0  703          - 1070.00000      -     -  221s
+     0     0 1070.00000    0  703          - 1070.00000      -     -  231s
+     0     2 1070.00000    0  703          - 1070.00000      -     -  264s
+     1     4 1070.00000    1  954          - 1070.00000      - 22299  265s
+    19    21 1070.00000    5  878          - 1070.00000      -  2072  270s
+    54    55 1070.00000   11  887          - 1070.00000      -  1112  280s
+   109   110 1070.00000   27  883          - 1070.00000      -   766  295s
+   217   218 1070.00000   54  909          - 1070.00000      -   564  303s
+   307   308 1070.00000   77  922          - 1070.00000      -   534  311s

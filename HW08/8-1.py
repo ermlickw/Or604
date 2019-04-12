@@ -280,19 +280,41 @@ for t in teams:
 NFLmodel.update()
 
 
-# #23 teams no more than 3 home/away in a row between weeks 4 and 16 inclusive
-# Pen21 = {} #making penalty term 
-# for t in teams:
-#     for i in range(4,15):
-#         wks = [w for w in range(i,i+3)]
-#                 Link21[t,wks] = NFLmodel.addVar(vtype=grb.GRB.BINARY,name="Link21-team-%s-wk-%s-%s" % (t,wks,wks+2))
-# NFLmodel.update()
+#23 teams no more than 3 home/away in a row between weeks 4 and 16 inclusive
+Pen23away = {} #making penalty term for away games in a row
+for t in teams:
+    for i in range(4,15):
+        wks = [w for w in range(i,i+3)]
+        Pen23away[t,i] = NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name="Pen23away-team-%s-wk-%s-%s" % (t,i,i+2))
+NFLmodel.update()
 
-# for t in teams:
-#     for i in range(4,15):
-#         wks = [w for w in range(i,i+3)]
-#         cName = '23_nothreeaway-%s-wkpd-%s-%s' % (t,wks,wks+2)
-#             myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',wks,'*','*')<= 2 + Pen23[t], name=cName)
+for t in teams:
+    for i in range(4,15):
+        wks = [w for w in range(i,i+3)]
+        cName = '23_nothreeaway-%s-wkpd-%s-%s' % (t,i,i+2)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',wks,'*','*'))<= 2 + Pen23away[t,i], name=cName)
+NFLmodel.update()
+
+Pen23home = {} #making penalty term for home games in a row
+for t in teams:
+    for i in range(4,15):
+        wks = [w for w in range(i,i+3)]
+        Pen23home[t,i] = NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name="Pen23home-team-%s-wk-%s-%s" % (t,i,i+2))
+NFLmodel.update()
+
+for t in teams:
+    for i in range(4,15):
+        wks = [w for w in range(i,i+3)]
+        cName = '23_nothreehome-%s-wkpd-%s-%s' % (t,i,i+2)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,wks,'*','*'))<= 2 + Pen23home[t,i], name=cName)
+NFLmodel.update()
+
+for t in teams: # make constraint to limit the number of home and away penalty terms per team
+    for i in range(4,15):
+        cName = '23_penaltylimithome/away-%s-wks-%s-%s' % (t, i, i+2)
+        myConstrs[cName] = NFLmodel.addConstr(Pen23away[t,i] +Pen23home[t,i] <=1, name=cName)
+NFLmodel.update() #limit the number of link varaibles for a team to two per season
+
 
 NFLmodel.update()
 #check if proper formulation
