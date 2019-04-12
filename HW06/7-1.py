@@ -235,51 +235,6 @@ for t in teams:
                                               if abs(teams[t][2]-teams[h][2])>=2)==0, name=cName)
 NFLmodel.update()
 
-#21 no teams more than 2 road games against teams coming off of a bye: -- be sure to ignore games against BYE
-Link21 = {} #making linking variable to enable +1 for all games that a team plays against opponents - overlap with teams without a bye in the previous week will be caught by other constraints
-for w in range(2,18):
-    for t in teams:
-        for hometeam in awaywithoutbye[t]:
-                Link21[t,hometeam,w] = NFLmodel.addVar(vtype=grb.GRB.BINARY,name="Link21-team-%s-vs-%s-wk-%s" % (t,hometeam,w))
-NFLmodel.update()
-
-for t in teams:
-    for w in range(2,18):
-        for hometeam in awaywithoutbye[t]:
-                cName = '21_notmorethan2roadgamesagainstbye-%s-vs-%s-wk-%s' % (t,hometeam,w)
-                myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,hometeam,w,'*','*'))+\
-                                                      grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(hometeam,'BYE',w-1,'SUNB','BYE'))<= 1 + Link21[t,hometeam,w], name=cName)
-NFLmodel.update() #a team can only play another team at home if the other team had a bye the previous week unless link variable activated
-
-for t in teams:
-    cName = '21_notmorethan2roadgamesvsbye-%s' % (t)
-    myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(Link21[t,h,w]  for h in awaywithoutbye[t] for w in range(2,18))<=2, name=cName)
-NFLmodel.update() #limit the number of link varaibles for a team to two per season
-
-#22a division opps cannot play each other back to back
-for t in teams:
-    for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
-        for i in range(1,17):
-            wk = [w for w in range(i,i+2)]
-            cName = '22a_nodivisionbacktoback-%s-vs-%s-wkpd-%s-%s' % (t,divopp,i,i+1)
-            myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,wk,'*','*'))+\
-                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(divopp,t,wk,'*','*'))<= 1, name=cName) # home or away only once per 2 wks
-NFLmodel.update()
-
-#22b division opps cannot play each other gapped with a bye - other constraints will take care of playing same week or playing each other home both times or away both times
-for t in teams:
-    for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
-        for w in range(1,16):
-            cName = '22b_nodivisiongappedbye-%s-vs-%s-wkpd-%s-%s' % (t,divopp,w,w+2)
-            myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,w,'*','*'))+ #playing wk 1 home or away\ 
-                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(divopp,t,w,'*','*'))+\
-                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,w+2,'*','*'))+#playing wk+2 home or awak\
-                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(divopp,t,w+2,'*','*'))+\
-                                                  grb.quicksum(games[a,h,w,s,n,] for a,h,w,s,n, in season.select(divopp,'BYE',w+1,'*','*'))+ #bye wk+1 home or away\
-                                                  grb.quicksum(games[a,h,w,s,n,] for a,h,w,s,n, in season.select(t,'BYE',w+1,'*','*'))<= 2, name=cName) #pick 2..
-NFLmodel.update()
-
-
 NFLmodel.update()
 #check if proper formulation
 NFLmodel.write('test.lp') 
