@@ -9,7 +9,8 @@ uploadData()
 GV,NK,OP,TM = getCleanData()
 
 # # #define indicies, data and variabless
-away = getAwayDict() #form: 'away team' [home teams played]
+away = getAwayDict() #form: 'away team' [home teams played]  - include BYE
+awaywithoutbye = {k:[vi for vi in v if vi != 'BYE'] for k,v in away.items()} # -remove bye same format
 home = getHomeDict() #form: 'home team' [away teams played]
 teams = TM.set_index('Team').T.to_dict('list')
 slots = list(set(NK.iloc[:,1]))
@@ -234,6 +235,28 @@ for t in teams:
                                               if abs(teams[t][2]-teams[h][2])>=2)==0, name=cName)
 NFLmodel.update()
 
+#21 no teams more than 2 road games against teams coming off of a bye: -- be sure to ignore games against BYE
+Link21 = {}
+for w in range(2,18):
+    for t in teams:
+        for hometeam in awaywithoutbye[t]:
+                Link21[t,hometeam,w] = NFLmodel.addVar(vtype=grb.GRB.BINARY,name="Link21-team-%s-vs-%s-wk-%s" % (t,hometeam,w))
+NFLmodel.update()
+
+for t in teams:
+    for w in range(2,18):
+        for hometeam in awaywithoutbye[t]:
+                cName = '21_notmorethan2roadgamesagainstbye-%s-vs-%s-wk-%s' % (t,hometeam,w)
+                myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,hometeam,w,'*','*'))+\
+                                                      grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(hometeam,'BYE',w-1,'SUNB','BYE'))<= 1 + Link21[t,hometeam,w], name=cName)
+NFLmodel.update()
+
+for t in teams:
+    cName = '21_notmorethan2roadgamesvsbye-%s' % (t)
+    myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(Link21[t,h,w]  for h in awaywithoutbye[t] for w in range(2,18))<=2, name=cName)
+NFLmodel.update()
+
+
 NFLmodel.update()
 #check if proper formulation
 NFLmodel.write('test.lp') 
@@ -241,7 +264,7 @@ NFLmodel.write('test.lp')
 #model solving tuning params:
 # NFLmodel.setParam('MIPFocus',0)
 # NFLmodel.setParam('TimeLimit',285)
-# NFLmodel.setParam('SolutionLimit',1)
+NFLmodel.setParam('SolutionLimit',1)
 # NFLmodel.setParam('MIPGap',0.0001)
 
 #solve:
