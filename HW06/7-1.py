@@ -185,7 +185,7 @@ for t in teams:
         myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,wk6window,s,n] for a,h,wk6window,s,n in season.select(t,'*',wk,'*','*'))>= 4, name=cName)
 NFLmodel.update()
 
-#15 away on thursday night are home the week before (assume first week is okay and BYES are not okay) - can only have away prev wk or thun not both
+#15 away on thursday night are home the week before (assume first week is okay and BYES are not okay) - will be resolved in other constraints - DR C says don't do this one
 for t in teams:
     for w in range(2,18):
         cName = '15_thursnightawayprevwkhome-%s-%s' % (t,w)
