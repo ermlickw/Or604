@@ -190,36 +190,36 @@ NFLmodel.update()
 for t in teams:
     for w in range(2,18):
         cName = '15_thursnightawayprevwkhome-%s-%s' % (t,w)
-        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,wprev,s,n] for a,h,wprev,s,n in season.select(t,'*',w-1,'*','*')) +\
-                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,thursdayslots,'*'))<=1, name=cName)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,wprev,s,n] for a,h,wprev,s,n in season.select(t,'*',w-1,'*','*')) +#away wk before\
+                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,thursdayslots,'*'))<=1, name=cName) # or thursday away. pcik one
 NFLmodel.update() 
 
 #16 monday night cannot play thursday night for next two weeks
 for t in teams:
     for w in range(1,16):
         cName = '16_monnight-nothurstwowks-%s-3wkwindow-%s' % (t,w)
-        myConstrs[cName] = NFLmodel.addConstr(2*grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,'MONN','*'))+\
+        myConstrs[cName] = NFLmodel.addConstr(2*grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,'MONN','*'))+#monday night game\
                                               2*grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,w,'MONN','*'))+\
-                                              grb.quicksum(games[a,h,wnxtnext,s,n] for a,h,wnxtnext,s,n in season.select('*',t,w+1,thursdayslots,'*'))+\
-                                              grb.quicksum(games[a,h,wnxtnext,s,n] for a,h,wnxtnext,s,n in season.select(t,'*',w+2,thursdayslots,'*'))<=2, name=cName)
+                                              grb.quicksum(games[a,h,wnxtnext,s,n] for a,h,wnxtnext,s,n in season.select('*',t,w+1,thursdayslots,'*'))+ #thursday wk+1 or wk+2\
+                                              grb.quicksum(games[a,h,wnxtnext,s,n] for a,h,wnxtnext,s,n in season.select(t,'*',w+2,thursdayslots,'*'))<=2, name=cName) #pick either monday or one of the two thursdays or both thursdays
 NFLmodel.update() 
 
 #17 all thusday teams will play at home the previous week (eliminates bye and first week issue in number 15)
 for t in teams:
     for w in range(2,18):
         cName = '17_thursnightprevwkhome-%s-%s' % (t,w)
-        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,wprev,s,n] for a,h,wprev,s,n in season.select(t,'*',w-1,'*','*')) +\
-                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,thursdayslots,'*'))+\
-                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,w,thursdayslots,'*'))<=1, name=cName)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,wprev,s,n] for a,h,wprev,s,n in season.select(t,'*',w-1,'*','*')) + #played away last week\
+                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,thursdayslots,'*'))+ #thursday game\
+                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,w,thursdayslots,'*'))<=1, name=cName) #pick one
 NFLmodel.update() 
 
 #18 team playing a bye in previous week cannot play on a thursday this week (fixes number 15 bye issue)
 for t in teams:
     for w in range(2,18):
         cName = '18_prevwkbye-nothursday-%s-%s' % (t,w)
-        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'BYE',w-1,'SUNB','BYE')) +\
-                                          grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,thursdayslots,'*'))+\
-                                          grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,w,thursdayslots,'*'))<=1, name=cName)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'BYE',w-1,'SUNB','BYE')) + #previous bye\
+                                          grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,thursdayslots,'*'))+ # thursday game home or away\
+                                          grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,w,thursdayslots,'*'))<=1, name=cName) #pick one
 NFLmodel.update()                           
 
 #19 Week 17 games can only consist of games between division opponents
@@ -263,7 +263,7 @@ for t in teams:
             wk = [w for w in range(i,i+2)]
             cName = '22a_nodivisionbacktoback-%s-vs-%s-wkpd-%s-%s' % (t,divopp,i,i+1)
             myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,wk,'*','*'))+\
-                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(divopp,t,wk,'*','*'))<= 1, name=cName)
+                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(divopp,t,wk,'*','*'))<= 1, name=cName) # home or away only once per 2 wks
 NFLmodel.update()
 
 #22b division opps cannot play each other gapped with a bye - other constraints will take care of playing same week or playing each other home both times or away both times
@@ -271,12 +271,12 @@ for t in teams:
     for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
         for w in range(1,16):
             cName = '22b_nodivisiongappedbye-%s-vs-%s-wkpd-%s-%s' % (t,divopp,w,w+2)
-            myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,w,'*','*'))+\
+            myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,w,'*','*'))+ #playing wk 1 home or away\ 
                                                   grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(divopp,t,w,'*','*'))+\
-                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,w+2,'*','*'))+\
+                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,w+2,'*','*'))+#playing wk+2 home or awak\
                                                   grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n, in season.select(divopp,t,w+2,'*','*'))+\
-                                                  grb.quicksum(games[a,h,w,s,n,] for a,h,w,s,n, in season.select(divopp,'BYE',w+1,'*','*'))+\
-                                                  grb.quicksum(games[a,h,w,s,n,] for a,h,w,s,n, in season.select(t,'BYE',w+1,'*','*'))<= 2, name=cName)
+                                                  grb.quicksum(games[a,h,w,s,n,] for a,h,w,s,n, in season.select(divopp,'BYE',w+1,'*','*'))+ #bye wk+1 home or away\
+                                                  grb.quicksum(games[a,h,w,s,n,] for a,h,w,s,n, in season.select(t,'BYE',w+1,'*','*'))<= 2, name=cName) #pick 2..
 NFLmodel.update()
 
 
