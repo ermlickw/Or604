@@ -285,7 +285,7 @@ Pen23away = {} #making penalty term for away games in a row
 for t in teams:
     for i in range(4,15):
         wks = [w for w in range(i,i+3)]
-        Pen23away[t,i] = NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name="Pen23away-team-%s-wk-%s-%s" % (t,i,i+2))
+        Pen23away[t,i] = NFLmodel.addVar(obj=-6,vtype=grb.GRB.BINARY,name="Pen23away-team-%s-wk-%s-%s" % (t,i,i+2))
 NFLmodel.update()
 
 for t in teams:
@@ -299,7 +299,7 @@ Pen23home = {} #making penalty term for home games in a row
 for t in teams:
     for i in range(4,15):
         wks = [w for w in range(i,i+3)]
-        Pen23home[t,i] = NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name="Pen23home-team-%s-wk-%s-%s" % (t,i,i+2))
+        Pen23home[t,i] = NFLmodel.addVar(obj=-6,vtype=grb.GRB.BINARY,name="Pen23home-team-%s-wk-%s-%s" % (t,i,i+2))
 NFLmodel.update()
 
 for t in teams:
@@ -322,7 +322,7 @@ for t in teams:
             for opp in awaywithoutbye[t]:
                 for opptwo in awaywithoutbye[t]:
                     if opptwo != opp:
-                        Pen24[t,i,opp,opptwo]= NFLmodel.addVar(obj=-12,vtype=grb.GRB.BINARY,name='Pen24-%s-wk-%s-v-%s-v2-%s' % (t, i, opp, opptwo))
+                        Pen24[t,i,opp,opptwo]= NFLmodel.addVar(obj=-2,vtype=grb.GRB.BINARY,name='Pen24-%s-wk-%s-v-%s-v2-%s' % (t, i, opp, opptwo))
 NFLmodel.update()
 
 for t in teams:
@@ -340,7 +340,7 @@ NFLmodel.update()
 #25 dont open the seaon with two away games
 Pen25 = {}
 for t in teams:
-        Pen25[t]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='Pen25-%s' % (t))
+        Pen25[t]= NFLmodel.addVar(obj=-2,vtype=grb.GRB.BINARY,name='Pen25-%s' % (t))
 NFLmodel.update()
 
 for t in teams:
@@ -352,7 +352,7 @@ NFLmodel.update()
 #26 dont end with two awy games
 Pen26 = {}
 for t in teams:
-        Pen26[t]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='Pen26-%s' % (t))
+        Pen26[t]= NFLmodel.addVar(obj=-2,vtype=grb.GRB.BINARY,name='Pen26-%s' % (t))
 NFLmodel.update()
 
 for t in teams:
@@ -366,7 +366,7 @@ flordiateams = ['MIA','TB','JAC']
 earlygames = ['SATE','SUNE']
 Pen27 = {}
 for t in teams:
-        Pen27[t]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='Pen27-%s' % (t))
+        Pen27[t]= NFLmodel.addVar(obj=-2,vtype=grb.GRB.BINARY,name='Pen27-%s' % (t))
 NFLmodel.update()
 
 for t in flordiateams:
@@ -382,7 +382,7 @@ sunday = ['SUNE','SUNL','SUND','SUNN']
 Pen28 = {}
 for w in range(1,18):
     for nk in cbsandfox:
-        Pen28[nk,w]= NFLmodel.addVar(obj=-6,name='Pen28-%s-wk-%s' % (nk,w)) #continuous
+        Pen28[nk,w]= NFLmodel.addVar(obj=-12,name='Pen28-%s-wk-%s' % (nk,w)) #continuous
 NFLmodel.update()
 
 for w in range(1,18):
@@ -402,13 +402,10 @@ Pen29 = {}
 for nk in cbsandfox:
     for t in teams:
         for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
-            Pen29[nk,t,divopp]= NFLmodel.addVar(obj=-6,name='Pen29-%s-%s-v-%s' % (nk,t,divopp)) #continuous
+            Pen29[nk,t,divopp]= NFLmodel.addVar(obj=-12,name='Pen29-%s-%s-v-%s' % (nk,t,divopp)) #continuous
 NFLmodel.update()
 
 for nk in cbsandfox:
-    print(teams['WAS'][0])
-    print(cbsandfoxdict[nk][0])
-    print([a for a in teams if teams[a][0]==cbsandfoxdict[nk][0]])
     for t in [a for a in teams if teams[a][0]==cbsandfoxdict[nk][0]]: # all the teams which are in the networks conference
         for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
             cName = '29_cbsfoxnotlostbothdivgames-%s-%s-v-%s' % (nk,t,divopp)
@@ -434,7 +431,7 @@ NFLmodel.update()
 Pen31 = {}
 for t in teams: 
     for i in range(1,17):
-            Pen31[t,i]= NFLmodel.addVar(obj=-6,name='Pen31-%s-wk-%s-%s' % (t,i,i+1)) #continuous
+            Pen31[t,i]= NFLmodel.addVar(obj=-2,name='Pen31-%s-wk-%s-%s' % (t,i,i+1)) #continuous
 NFLmodel.update()
 
 for t in teams: 
@@ -454,7 +451,7 @@ NFLmodel.write('test.lp')
 # NFLmodel.setParam('MIPFocus',0)
 # NFLmodel.setParam('TimeLimit',285)
 # NFLmodel.setParam('SolutionLimit',1)
-# NFLmodel.setParam('MIPGap',0.0001)
+NFLmodel.setParam('MIPGap',0.1)
 
 #solve:
 # GRBRead(myModel, fullPathToMSTFile) #WARM MST PRELOAD
