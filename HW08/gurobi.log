@@ -11055,3 +11055,175 @@ Root simplex log...
 Iteration    Objective       Primal Inf.    Dual Inf.      Time
     8888    1.5562920e+03   4.080591e+05   0.000000e+00      5s
    18068    1.1394355e+03   6.841549e+04   0.000000e+00     10s
+   23916    1.1114198e+03   4.194753e+03   0.000000e+00     15s
+   30203    1.0695000e+03   0.000000e+00   0.000000e+00     20s
+
+Root relaxation: objective 1.069500e+03, 30203 iterations, 18.50 seconds
+Total elapsed time = 36.00s
+Total elapsed time = 49.50s
+Total elapsed time = 60.73s
+Total elapsed time = 66.76s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1069.50000    0 1062          - 1069.50000      -     -   72s
+     0     0 1069.50000    0 1171          - 1069.50000      -     -   77s
+     0     0 1069.50000    0 1142          - 1069.50000      -     -   78s
+     0     0 1069.50000    0 1033          - 1069.50000      -     -  116s
+     0     0 1069.50000    0 1011          - 1069.50000      -     -  116s
+     0     0 1068.50000    0 1070          - 1068.50000      -     -  170s
+     0     0 1068.50000    0 1078          - 1068.50000      -     -  171s
+     0     0 1067.50000    0 1135          - 1067.50000      -     -  174s
+     0     0 1067.50000    0 1103          - 1067.50000      -     -  175s
+     0     0 1067.50000    0 1100          - 1067.50000      -     -  176s
+     0     0 1067.50000    0 1051          - 1067.50000      -     -  177s
+     0     0 1067.50000    0  877          - 1067.50000      -     -  208s
+     0     0 1067.50000    0 1028          - 1067.50000      -     -  210s
+     0     0 1067.50000    0  962          - 1067.50000      -     -  246s
+     0     0 1067.50000    0 1081          - 1067.50000      -     -  248s
+     0     0 1067.50000    0  975          - 1067.50000      -     -  301s
+     0     0 1067.50000    0 1124          - 1067.50000      -     -  303s
+     0     0 1067.50000    0  987          - 1067.50000      -     -  360s
+     0     0 1067.50000    0 1107          - 1067.50000      -     -  362s
+
+Cutting planes:
+  Clique: 56
+  MIR: 65
+  Zero half: 21
+
+Explored 1 nodes (584301 simplex iterations) in 363.28 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 0
+
+Solve interrupted
+Best objective -, best bound 1.067500000000e+03, gap -
+
+Gurobi 8.1.0 (win64, Python) logging started 04/13/19 10:28:43
+
+Academic license - for non-commercial use only
+Changed value of parameter MIPGap to 0.1
+   Prev: 0.0001  Min: 0.0  Max: 1e+100  Default: 0.0001
+Optimize a model with 43268 rows, 50316 columns and 785062 nonzeros
+Variable types: 834 continuous, 49482 integer (49482 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 31857 rows and 31103 columns
+Presolve time: 1.12s
+Presolved: 11411 rows, 19213 columns, 503457 nonzeros
+Variable types: 0 continuous, 19213 integer (18829 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    9427    1.3291601e+03   1.240445e+05   0.000000e+00      5s
+   18349    1.1224275e+03   1.719048e+04   0.000000e+00     10s
+   24982    1.0694224e+03   1.681095e+03   0.000000e+00     15s
+   28223    1.0695000e+03   0.000000e+00   0.000000e+00     17s
+
+Root relaxation: objective 1.069500e+03, 28223 iterations, 15.95 seconds
+Total elapsed time = 35.63s
+Total elapsed time = 48.55s
+Total elapsed time = 52.83s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1069.50000    0 1114          - 1069.50000      -     -   56s
+     0     0 1069.50000    0 1187          - 1069.50000      -     -   63s
+     0     0 1069.50000    0 1132          - 1069.50000      -     -   63s
+     0     0 1069.50000    0  889          - 1069.50000      -     -   98s
+     0     0 1069.50000    0  875          - 1069.50000      -     -   99s
+     0     0 1069.25000    0  885          - 1069.25000      -     -  140s
+     0     0 1069.25000    0  920          - 1069.25000      -     -  141s
+     0     0 1067.50000    0 1092          - 1067.50000      -     -  146s
+     0     0 1067.50000    0 1075          - 1067.50000      -     -  147s
+     0     0 1067.50000    0 1115          - 1067.50000      -     -  149s
+     0     0 1067.50000    0 1090          - 1067.50000      -     -  149s
+     0     0 1067.50000    0  905          - 1067.50000      -     -  183s
+     0     0 1067.50000    0 1099          - 1067.50000      -     -  185s
+     0     0 1067.50000    0  902          - 1067.50000      -     -  232s
+     0     0 1067.50000    0  950          - 1067.50000      -     -  233s
+     0     0 1067.50000    0  921          - 1067.50000      -     -  270s
+     0     0 1067.50000    0  991          - 1067.50000      -     -  271s
+     0     0 1067.50000    0  971          - 1067.50000      -     -  319s
+     0     0 1067.50000    0 1046          - 1067.50000      -     -  320s
+     0     0 1067.50000    0  951          - 1067.50000      -     -  374s
+     0     0 1067.50000    0  951          - 1067.50000      -     -  409s
+     0     2 1067.50000    0  951          - 1067.50000      -     -  486s
+     1     4 1067.50000    1 1107          - 1067.50000      - 33758  508s
+     3     8 1067.50000    2 1047          - 1067.50000      - 11994  534s
+     7    12 1067.50000    3 1012          - 1067.50000      -  6123  542s
+    11    16 1067.50000    3 1137          - 1067.50000      -  4636  573s
+    15    20 1067.50000    4 1001          - 1067.50000      -  5099  580s
+    19    24 1067.50000    4 1055          - 1067.50000      -  4263  586s
+    23    20 1067.50000    5 1024          - 1067.50000      -  3667  590s
+    27    31 1067.50000    5 1066          - 1067.50000      -  3263  596s
+    32    30 1067.50000    6 1015          - 1067.50000      -  2887  609s
+    43    50 1067.50000    7 1003          - 1067.50000      -  2406  643s
+    84    81 1067.50000   13 1022          - 1067.50000      -  1711  711s
+   203   201 1067.50000   27 1004          - 1067.50000      -  1385  728s
+
+Cutting planes:
+  Clique: 32
+  MIR: 38
+  Zero half: 20
+
+Explored 239 nodes (971265 simplex iterations) in 728.67 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 0
+
+Solve interrupted
+Best objective -, best bound 1.067500000000e+03, gap -
+
+Gurobi 8.1.0 (win64, Python) logging started 04/13/19 10:43:32
+
+Academic license - for non-commercial use only
+
+Gurobi 8.1.0 (win64, Python) logging started 04/13/19 10:43:50
+
+Academic license - for non-commercial use only
+Changed value of parameter MIPGap to 0.1
+   Prev: 0.0001  Min: 0.0  Max: 1e+100  Default: 0.0001
+Optimize a model with 43268 rows, 50316 columns and 785062 nonzeros
+Variable types: 0 continuous, 50316 integer (50316 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+00]
+Presolve removed 31857 rows and 31103 columns
+Presolve time: 1.08s
+Presolved: 11411 rows, 19213 columns, 503457 nonzeros
+Variable types: 0 continuous, 19213 integer (19213 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    8611    1.2866558e+03   2.741588e+05   0.000000e+00      5s
+   16463    1.0694134e+03   2.054776e+03   0.000000e+00     10s
+   23044    1.0695000e+03   0.000000e+00   0.000000e+00     15s
+
+Root relaxation: objective 1.069500e+03, 23044 iterations, 13.76 seconds
+Total elapsed time = 34.11s
+Total elapsed time = 48.90s
+Total elapsed time = 62.59s
+Total elapsed time = 76.20s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1069.50000    0 1108          - 1069.50000      -     -   89s
+     0     0 1069.50000    0 1164          - 1069.50000      -     -   95s
+     0     0 1069.50000    0 1145          - 1069.50000      -     -   95s
+     0     0 1069.50000    0  996          - 1069.50000      -     -  147s
+     0     0 1069.50000    0 1053          - 1069.50000      -     -  149s
+     0     0 1069.50000    0  994          - 1069.50000      -     -  186s
+     0     0 1069.50000    0 1045          - 1069.50000      -     -  187s
+     0     0 1069.50000    0 1018          - 1069.50000      -     -  251s
+     0     0 1069.50000    0 1106          - 1069.50000      -     -  253s
