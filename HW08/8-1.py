@@ -309,11 +309,34 @@ for t in teams:
         myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,wks,'*','*'))<= 2 + Pen23home[t,i], name=cName)
 NFLmodel.update()
 
-for t in teams: # make constraint to limit the number of home and away penalty terms per team
+for t in teams: # make constraint to limit the number of home and away penalty terms per team for each 3 week block
     for i in range(4,15):
         cName = '23_penaltylimithome/away-%s-wks-%s-%s' % (t, i, i+2)
         myConstrs[cName] = NFLmodel.addConstr(Pen23away[t,i] +Pen23home[t,i] <=1, name=cName)
 NFLmodel.update() #limit the number of link varaibles for a team to two per season
+
+#24 no consecutive road games involving travel across more than one timezone - go from home to away team 1 to away team 2 and cant be over 1 TZ travel
+Pen24 = {}
+for t in teams:
+        for i in range(1,17):
+            for opp in awaywithoutbye[t]:
+                for opptwo in awaywithoutbye[t]:
+                    if opptwo != opp:
+                        Pen24[t,i,opp,opptwo]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='24_Penalty-%s-wk-%s-v-%s-v2-$s' % (t, i, opp, opptwo))
+NFLmodel.update()
+
+for t in teams:
+        for i in range(1,17):
+            for opp in awaywithoutbye[t]:
+                for opptwo in awaywithoutbye[t]:
+                    if opptwo != opp:
+                        cName = '24_consecutiveawaygamesacrosstimezone-%s-v-%s-v-%s-wk-%s-%s' % (t,opp, opptwo, i, i+1)
+                        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,opp,i,'*','*') \
+                                                              if abs(teams[t][2]-teams[opp][2]))>1 +\
+                                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,opptwo,i+1,'*','*')\
+                                                              if abs(teams[opp][2]-teams[opptwo][2])>1) == 0 + Pen24home[t,i,opp,opptwo], name=cName)
+NFLmodel.update()
+
 
 
 NFLmodel.update()
