@@ -322,7 +322,7 @@ for t in teams:
             for opp in awaywithoutbye[t]:
                 for opptwo in awaywithoutbye[t]:
                     if opptwo != opp:
-                        Pen24[t,i,opp,opptwo]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='24_Penalty-%s-wk-%s-v-%s-v2-$s' % (t, i, opp, opptwo))
+                        Pen24[t,i,opp,opptwo]= NFLmodel.addVar(obj=-12,vtype=grb.GRB.BINARY,name='Pen24-%s-wk-%s-v-%s-v2-%s' % (t, i, opp, opptwo))
 NFLmodel.update()
 
 for t in teams:
@@ -332,11 +332,118 @@ for t in teams:
                     if opptwo != opp:
                         cName = '24_consecutiveawaygamesacrosstimezone-%s-v-%s-v-%s-wk-%s-%s' % (t,opp, opptwo, i, i+1)
                         myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,opp,i,'*','*') \
-                                                              if abs(teams[t][2]-teams[opp][2]))>1 +\
+                                                              if abs(teams[t][2]-teams[opp][2])>1) +\
                                                               grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,opptwo,i+1,'*','*')\
-                                                              if abs(teams[opp][2]-teams[opptwo][2])>1) == 0 + Pen24home[t,i,opp,opptwo], name=cName)
+                                                              if abs(teams[opp][2]-teams[opptwo][2])>1) <= 1 + Pen24[t,i,opp,opptwo], name=cName)
 NFLmodel.update()
 
+#25 dont open the seaon with two away games
+Pen25 = {}
+for t in teams:
+        Pen25[t]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='Pen25-%s' % (t))
+NFLmodel.update()
+
+for t in teams:
+        wk = [w for w in range(1,3)]
+        cName = '25_starttwoawaygames-%s' % (t)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',wk,'*','*')) <= 1 + Pen25[t], name=cName)
+NFLmodel.update()
+
+#26 dont end with two awy games
+Pen26 = {}
+for t in teams:
+        Pen26[t]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='Pen26-%s' % (t))
+NFLmodel.update()
+
+for t in teams:
+        wk = [w for w in range(16,18)]
+        cName = '26_endtwoawaygames-%s' % (t)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',wk,'*','*')) <= 1 + Pen26[t], name=cName)
+NFLmodel.update()
+
+#27 Flordia teams no early games in weeks 1-4 inclusive
+flordiateams = ['MIA','TB','JAC']
+earlygames = ['SATE','SUNE']
+Pen27 = {}
+for t in teams:
+        Pen27[t]= NFLmodel.addVar(obj=-3,vtype=grb.GRB.BINARY,name='Pen27-%s' % (t))
+NFLmodel.update()
+
+for t in flordiateams:
+        wk = [w for w in range(1,5)]
+        cName = '27_flordiaearlyseptembergames-%s' % (t)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',wk,earlygames,'*'))+\
+                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,wk,earlygames,'*')) == 0 + Pen26[t], name=cName)
+NFLmodel.update()
+
+#28 CBS and FOX 5 or more games on a sunday - only once per network if it happens at all
+cbsandfox = ['CBS','FOX']
+sunday = ['SUNE','SUNL','SUND','SUNN']
+Pen28 = {}
+for w in range(1,18):
+    for nk in cbsandfox:
+        Pen28[nk,w]= NFLmodel.addVar(obj=-6,name='Pen28-%s-wk-%s' % (nk,w)) #continuous
+NFLmodel.update()
+
+for w in range(1,18):
+    for nk in cbsandfox:
+        cName = '28_cbsfoxatleast5sundays-%s-wk-%s' % (nk,w)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*','*',w,sunday,nk)) >= 5 - Pen28[nk,w], name=cName)
+NFLmodel.update()
+
+for nk in cbsandfox:
+        cName = '28_penaltylimit-%s-wk-%s' % (nk,w)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(Pen28[nk,w] for w in range(1,18)) <= 1, name=cName)
+NFLmodel.update()
+
+#29 CBS and FOX should cover at least one of the divisional games
+cbsandfoxdict = {'CBS':['AFC'],'FOX':['NFC']}
+Pen29 = {}
+for nk in cbsandfox:
+    for t in teams:
+        for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
+            Pen29[nk,t,divopp]= NFLmodel.addVar(obj=-6,name='Pen29-%s-%s-v-%s' % (nk,t,divopp)) #continuous
+NFLmodel.update()
+
+for nk in cbsandfox:
+    print(teams['WAS'][0])
+    print(cbsandfoxdict[nk][0])
+    print([a for a in teams if teams[a][0]==cbsandfoxdict[nk][0]])
+    for t in [a for a in teams if teams[a][0]==cbsandfoxdict[nk][0]]: # all the teams which are in the networks conference
+        for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
+            cName = '29_cbsfoxnotlostbothdivgames-%s-%s-v-%s' % (nk,t,divopp)
+            myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,'*','*',nk))+\
+                                                  grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(divopp,t,'*','*',nk)) >= 1 - Pen29[nk,t,divopp], name=cName)
+NFLmodel.update()
+
+#30 divisional games should not both be played in weeks 1-9
+Pen30 = {}
+for t in teams: 
+    for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
+            Pen30[t,divopp]= NFLmodel.addVar(obj=-6,name='Pen30-%s-v-%s' % (t,divopp)) #continuous
+NFLmodel.update()
+
+for t in teams: 
+    for divopp in [o for o in teams if teams[t][1]==teams[o][1] and teams[t][0]==teams[o][0] and o != t]: #all teams same division[t] except t
+        cName = '30_divseriesoverbeforewk9-%s-v-%s' % (t,divopp)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,divopp,range(1,10),'*','*'))+\
+                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(divopp,t,range(1,10),'*','*')) <= 1 - Pen30[t,divopp], name=cName)
+NFLmodel.update()
+
+#31 not play on road after monday night game
+Pen31 = {}
+for t in teams: 
+    for i in range(1,17):
+            Pen31[t,i]= NFLmodel.addVar(obj=-6,name='Pen31-%s-wk-%s-%s' % (t,i,i+1)) #continuous
+NFLmodel.update()
+
+for t in teams: 
+    for i in range(1,17):
+        cName = '31_noroadaftermonday-%s-wk-%s-%s' % (t,i,i+1)
+        myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',i,'MONN','*'))+\
+                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select('*',t,i,'MONN','*'))+\
+                                              grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',i+1,'*','*')) <= 1 + Pen31[t,i], name=cName)
+NFLmodel.update()
 
 
 NFLmodel.update()
