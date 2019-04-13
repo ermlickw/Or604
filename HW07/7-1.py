@@ -232,7 +232,7 @@ for t in teams:
     for w in range(1,18):
         cName = '20_thursdaytimezoneforawayteamtravel-%s-%s' % (w,t)
         myConstrs[cName] = NFLmodel.addConstr(grb.quicksum(games[a,h,w,s,n] for a,h,w,s,n in season.select(t,'*',w,'THUN','*') \
-                                              if abs(teams[t][2]-teams[h][2])>=2)==0, name=cName)
+                                              if abs(teams[t][2]-teams[h][2])>=2)==0, name=cName) # no games if time zone difference ==2 or more
 NFLmodel.update()
 
 NFLmodel.update()
