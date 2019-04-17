@@ -450,11 +450,10 @@ NFLmodel.write('test.lp')
 # NFLmodel.setParam('MIPFocus',0)
 # NFLmodel.setParam('TimeLimit',285)
 # NFLmodel.setParam('SolutionLimit',1)
-NFLmodel.setParam('MIPGap',0.1)
+# NFLmodel.setParam('MIPGap',0.1)
 
 #solve:
-# GRBRead(myModel, fullPathToMSTFile) #WARM MST PRELOAD
-
+NFLmodel.read('solution.mst') #preload
 NFLmodel.optimize()
 
 ##Results:
