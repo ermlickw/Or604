@@ -26,10 +26,9 @@ def set_constrained_variables():
             # if it doesnt contain one of those terms then set all the variables in that constraint to zero
             if not SoftlinkingConstr:
                 for r in range(row.size()):
-                    row.getVar(r).lb == 0
-                    row.getVar(r).ub ==0
-                    print(row.getVar(r))
-    NFLmodel.update()
+                    row.getVar(r).lb = 0
+                    row.getVar(r).ub = 0
+                    NFLmodel.update()
     return
                 
 
@@ -50,6 +49,8 @@ def get_variables():
                 free_vars[tuple(temp[1:])] = v
                 var_status[tuple(temp[1:])]=(v.lb,v.ub)
     free_vars = cleanfreevars(free_vars,var_status)
+    print(len(free_vars) )
+    print(len(var_status))
     return free_vars, var_status
 
 def cleanfreevars(free_vars,var_status):
@@ -66,7 +67,7 @@ def fix_impossible_games(free_vars,var_status):
     start=time.time()
     print('starting...')
     NFLmodel.setParam( 'OutputFlag', False )
-    NFLmodel.setParam('TimeLimit',1)
+    NFLmodel.setParam('TimeLimit',2)
     stop = False
     while not stop:
         stop = True
@@ -97,4 +98,4 @@ if __name__ == "__main__":
     #load constraints
     set_constrained_variables()
     free_vars, var_status = get_variables()
-    # fix_impossible_games(free_vars,var_status)
+    fix_impossible_games(free_vars,var_status)
