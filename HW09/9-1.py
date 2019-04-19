@@ -5,6 +5,7 @@ Script to facilitate making seeds for solving the full problem. This script find
 '''
 import gurobipy as grb
 import time
+import pandas as pd
 
 
 
@@ -72,7 +73,7 @@ def fix_impossible_games(free_vars,var_status):
     while not stop:
         stop = True
         end = time.time()
-        print(str(len(free_vars))+ ' free variables remaining ', end-start)
+        print(str(len(free_vars))+ ' free variables remaining. Runtime = ' + str(round((end-start)/60,2)) + ' minutes')
         for v in free_vars:
             free_vars[v].lb = 1
             NFLmodel.update()
@@ -87,7 +88,8 @@ def fix_impossible_games(free_vars,var_status):
                 free_vars[v].lb = 0
                 print(str(v) + ' is free')
                 NFLmodel.update()
-        free_vars = cleanfreevars()
+        free_vars = cleanfreevars(free_vars,var_status)
+        print(str(len(free_vars))+ ' free variables remaining ', end-start)
 
 
 
@@ -99,3 +101,5 @@ if __name__ == "__main__":
     set_constrained_variables()
     free_vars, var_status = get_variables()
     fix_impossible_games(free_vars,var_status)
+    write = pd.DataFrame.from_dict(var_status,orient="index")
+    write.to_csv("GameBounds.csv")
