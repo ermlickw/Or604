@@ -50,8 +50,8 @@ def get_variables():
                 free_vars[tuple(temp[1:])] = v
                 var_status[tuple(temp[1:])]=(v.lb,v.ub)
     free_vars = cleanfreevars(free_vars,var_status)
-    print(len(free_vars) )
     print(len(var_status))
+    print(len(free_vars) )
     return free_vars, var_status
 
 def cleanfreevars(free_vars,var_status):
