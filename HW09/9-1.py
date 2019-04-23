@@ -103,3 +103,4 @@ if __name__ == "__main__":
     fix_impossible_games(free_vars,var_status)
     write = pd.DataFrame.from_dict(var_status,orient="index")
     write.to_csv("GameBounds.csv")
+    NFLmodel.write('test.lp')
