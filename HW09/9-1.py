@@ -89,6 +89,7 @@ def fix_impossible_games(free_vars,var_status):
                 print(str(v) + ' is free')
                 NFLmodel.update()
         free_vars = cleanfreevars(free_vars,var_status)
+        NFLmodel.write('updated.lp')
         print(str(len(free_vars))+ ' free variables remaining ', end-start)
 
 
@@ -103,4 +104,4 @@ if __name__ == "__main__":
     fix_impossible_games(free_vars,var_status)
     write = pd.DataFrame.from_dict(var_status,orient="index")
     write.to_csv("GameBounds.csv")
-    NFLmodel.write('test.lp')
+    NFLmodel.write('updated.lp')
