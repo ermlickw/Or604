@@ -68,7 +68,7 @@ def fix_impossible_games(free_vars,var_status):
     start=time.time()
     print('starting...')
     NFLmodel.setParam( 'OutputFlag', False )
-    NFLmodel.setParam('TimeLimit',2)
+    NFLmodel.setParam('TimeLimit',10)
     stop = False
     while not stop:
         stop = True
