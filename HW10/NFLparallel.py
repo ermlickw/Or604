@@ -61,11 +61,13 @@ def cleanfreevars(free_vars,var_status):
                 free_vars.pop(v,None)
     return free_vars
 
-def varProb(iq,oq):
-    NFLR = grb.read('../models/temp.lp')
+def varProb(iq,oq, start_time):
+    NFLR = grb.read('OR604 Model File v2.lp')
+    NFLR.setParam('OutputFlag', False )
     NFLR.setParam('logtoconsole',0)
     NFLR.setParam('timelimit',10)
     NFLR.setParam('threadlimit',1)
+    
     while True:
         try:
             task = iq.get()
@@ -73,16 +75,16 @@ def varProb(iq,oq):
                 if task == None:
                     break
                 ##operate on the variable
-                myVar = NFLR.getVarbyName(task)
+                myVar = NFLR.getVarByName(task)
                 myVar.lb = 1
                 NFLR.update()
                 NFLR.optimize()
-                if NFLR.Status == grb.GRB.INFESIBLE:
+                if NFLR.Status == grb.GRB.INFEASIBLE:
                     myVar.ub = 0
-                    mymessage = task + ': is infeasible' + (time.mktime(time.localtime())-time.mktime(start_time))
+                    mymessage = task + '-- is infeasible Time: ' + str(time.mktime(time.localtime())-time.mktime(start_time))
                 else:
                     myVar.lb = 0
-                    mymessage = task + ': is good' + (time.mktime(time.localtime())-time.mktime(start_time))
+                    mymessage = task + '-- is good. Time: '  + str(time.mktime(time.localtime())-time.mktime(start_time))
                 NFLR.update()
                 oq.put((1,mymessage))
             except:
@@ -91,20 +93,21 @@ def varProb(iq,oq):
             time.sleep(4)
     return
 
-def MyHandler(free_vars,pool_size, varstatus):
+def MyHandler(free_vars,pool_size, varstatus, start_time, NFLmodel):
 
     def populate_queue(freevars,inputqueue, counter):
         for v in freevars:
             if freevars[v].lb != freevars[v].ub:
-                inputqueue.put(v) # dont have to pickle just needs to be pickeable
+                varname = 'GO_' + '_'.join(list(v))
+                inputqueue.put(varname) # dont have to pickle just needs to be pickeable
                 counter+=1
-        print('(MASTER): COMPLETED LOADING QUEUE WITH TASKS WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+        print('(MASTER): COMPLETED LOADING QUEUE WITH TASKS WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
         return inputqueue, counter
     
     def killswitch(pool_size, iq):
         for i in range(pool_size*2):
             iq.put((None,None))
-        print('(MASTER): COMPLETED LOADING QUEUE WITH NONES WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+        print('(MASTER): COMPLETED LOADING QUEUE WITH NONES WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
 
 
     iq = mp.Queue()
@@ -115,19 +118,19 @@ def MyHandler(free_vars,pool_size, varstatus):
         Stop = True
         iq, counter = populate_queue(free_vars,iq,counter) #only free variables are populated
         print(counter)
-        myprocesses = [mp.process(target=varProb,args=(iq,oq)) for _ in range(pool_size)]
-        print(iq)
+        myprocesses = [mp.Process(target=varProb,args=(iq,oq,start_time)) for _ in range(pool_size)]
         for p in myprocesses:
             p.start()
 
         #manage output queue
+        count = 0
         while count < counter+1: ## may be <=?
             try: 
                 result = oq.get()
                 if result[0]==1:
                     count+=1
                     my_message = result[1]
-                    if 'infesible' in my_message:
+                    if 'infeasible' in my_message:
                         var_status[v] = (0,0)
                         free_vars[my_message[0]].lb=0
                         free_vars[my_message[0]].ub=0
@@ -141,8 +144,8 @@ def MyHandler(free_vars,pool_size, varstatus):
                     print(result)
             except:
                 time.sleep(.5)
-            NFLmodel.write('updated.lp')
-        if Stop = True:
+        NFLmodel.write('updated.lp')
+        if Stop == True:
             killswitch()
 # stop the routine from moving forward until all processes have completed
     # their assigned task.  Without this, you will get an error
@@ -167,18 +170,18 @@ def MyHandler(free_vars,pool_size, varstatus):
         except:
             pass
 
-    print('(MASTER): COMPLETED FLUSHING QUEUE WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+    print('(MASTER): COMPLETED FLUSHING QUEUE WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
     return free_vars
 def main():
 
     #load constraints
     set_constrained_variables()
     free_vars, var_status = get_variables()
-    free_vars, var_status = MyHandler(free_vars,pool_size, var_status) #do probing and all that parallel
+    free_vars, var_status = MyHandler(free_vars,pool_size, var_status, start_time, NFLmodel) #do probing and all that parallel
     write = pd.DataFrame.from_dict(var_status,orient="index") #write solution
     write.to_csv("GameBounds.csv")
     NFLmodel.write('updated.lp')
-    print('(MASTER):  ALL PROCESSES HAVE COMPLETED WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+    print('(MASTER):  ALL PROCESSES HAVE COMPLETED WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
 
 if __name__ == "__main__":
     start_time = time.localtime()
