@@ -64,16 +64,18 @@ def cleanfreevars(free_vars,var_status):
                 free_vars.pop(v,None)
     return free_vars
 
-def fix_impossible_games(free_vars,var_status):
+def fix_impossible_games(free_vars,var_status,NFLmodel):
     start=time.time()
-    print('starting...')
-    NFLmodel.setParam( 'OutputFlag', False )
-    NFLmodel.setParam('TimeLimit',10)
+    # NFLmodel.write('updated.lp') first time only
+    print('Starting...')
     stop = False
     while not stop:
         stop = True
         end = time.time()
         print(str(len(free_vars))+ ' free variables remaining. Runtime = ' + str(round((end-start)/60,2)) + ' minutes')
+        NFLmodel = grb.read('updated.lp')
+        NFLmodel.setParam( 'OutputFlag', False )
+        NFLmodel.setParam('TimeLimit',2)
         for v in free_vars:
             free_vars[v].lb = 1
             NFLmodel.update()
@@ -101,7 +103,7 @@ if __name__ == "__main__":
     #load constraints
     set_constrained_variables()
     free_vars, var_status = get_variables()
-    fix_impossible_games(free_vars,var_status)
+    fix_impossible_games(free_vars,var_status, NFLmodel)
     write = pd.DataFrame.from_dict(var_status,orient="index")
     write.to_csv("GameBounds.csv")
     NFLmodel.write('updated.lp')
