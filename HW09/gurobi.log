@@ -3314,3 +3314,70 @@ Reading time = 0.52 seconds
 Read LP format model from file updated.lp
 Reading time = 0.52 seconds
 : 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 04/23/19 21:53:45
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file updated.lp
+Reading time = 0.55 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Optimize a model with 25888 rows, 19166 columns and 1028139 nonzeros
+Variable types: 6651 continuous, 12515 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 7e+02]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 19760 rows and 10917 columns
+Presolve time: 3.08s
+Presolved: 6128 rows, 8249 columns, 218106 nonzeros
+Variable types: 32 continuous, 8217 integer (8141 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    4784    1.0001480e+00   1.219916e+04   0.000000e+00      5s
+
+Gurobi 8.1.0 (win64, Python) logging started 04/23/19 21:54:47
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file updated.lp
+Reading time = 0.55 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 04/23/19 21:57:31
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file updated.lp
+Reading time = 0.54 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 04/23/19 22:30:29
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 04/23/19 22:30:46
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 04/23/19 22:31:38
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
