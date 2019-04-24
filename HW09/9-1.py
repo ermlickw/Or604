@@ -75,7 +75,7 @@ def fix_impossible_games(free_vars,var_status):
     while not stop:
         stop = True
         end = time.time()
-        print(str(len(free_vars))+ ' free variables remaining. Runtime = ' + str(round((end-start)/60,2)) + ' minutes')
+        print(str(len(free_vars))+ ' free variables remaining. Runtime = ' + str(round((end-start)/60,2)) + ' minutes.')
         for v in free_vars:
             free_vars[v].lb = 1
             NFLmodel.update()
@@ -92,7 +92,7 @@ def fix_impossible_games(free_vars,var_status):
                 NFLmodel.update()
         free_vars = cleanfreevars(free_vars,var_status)
         NFLmodel.write('updated.lp')
-        print(str(len(free_vars))+ ' free variables remaining ', str(round((end-start)/60,2)))
+        print(str(len(free_vars))+ ' free variables remaining. Runtime =  ', str(round((end-start)/60,2))+ ' minutes.')
 
 
 
