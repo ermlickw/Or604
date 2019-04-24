@@ -1,7 +1,65 @@
+import gurobipy as grb
+import time
+import pandas as pd
 import multiprocessing as mp 
 import traceback
 import random
 import time
+
+def set_constrained_variables():
+    '''
+    This function sets the games which must be zero based on the constraints to zero (i.e. zero upper and lower bound)
+    '''
+
+    myConstrs = NFLmodel.getConstrs()
+    for c in myConstrs:
+        SoftlinkingConstr = False
+        if c.sense =='<'and c.RHS == 0:
+            row = NFLmodel.getRow(c)
+            #check if the row contains a linking term or penalty term
+            for r in range(row.size()):
+                if 'GO_' not in row.getVar(r).varName:
+                    SoftlinkingConstr = True
+                    break
+            # if it doesnt contain one of those terms then set all the variables in that constraint to zero
+            if not SoftlinkingConstr:
+                for r in range(row.size()):
+                    row.getVar(r).lb = 0
+                    row.getVar(r).ub = 0
+                    NFLmodel.update()
+    return
+                
+
+def get_variables():
+    '''
+    makes two dictionarys keyed over cleaned up tuples of the game variables:
+    (1) freevars - are the gurobi objects of the variables which are not yet assigned
+    (2) var_status contains a tuple indicating the bounds of the variables
+    '''
+    free_vars = {}
+    var_status = {}
+    temp=[]
+    myVars = NFLmodel.getVars()
+    for v in myVars:
+        if 'GO' == v.varName[:2]:
+            temp = v.varName.split('_')
+            if 'PRIME' in temp:
+                free_vars[tuple(temp[1:])] = v
+                var_status[tuple(temp[1:])]=(v.lb,v.ub)
+    free_vars = cleanfreevars(free_vars,var_status)
+    print(len(var_status))
+    print(len(free_vars) )
+    return free_vars, var_status
+
+def cleanfreevars(free_vars,var_status):
+    '''
+    this kills any variables in freevars which now have fixed bounds as recorded in var_status
+    '''
+    for v in var_status:
+        if var_status[v][0]==var_status[v][1]:
+            if v in free_vars:
+                free_vars.pop(v,None)
+    return free_vars
 
 def varProb(iq,oq):
     NFLR = grb.read('../models/temp.lp')
@@ -12,7 +70,7 @@ def varProb(iq,oq):
         try:
             task = iq.get()
             try:
-                if task = None:
+                if task == None:
                     break
                 ##operate on the variable
                 myVar = NFLR.getVarbyName(task)
@@ -21,41 +79,113 @@ def varProb(iq,oq):
                 NFLR.optimize()
                 if NFLR.Status == grb.GRB.INFESIBLE:
                     myVar.ub = 0
-                    mymessage = task + ': is infeasible'
+                    mymessage = task + ': is infeasible' + (time.mktime(time.localtime())-time.mktime(start_time))
                 else:
                     myVar.lb = 0
-                    mymessage = task + ': is good'
+                    mymessage = task + ': is good' + (time.mktime(time.localtime())-time.mktime(start_time))
                 NFLR.update()
-                oq.put(1,mymessage)
+                oq.put((1,mymessage))
+            except:
+                oq.put((2,traceback.format_exc()))
         except:
             time.sleep(4)
+    return
 
-def MyHandler(free_vars,pool_size):
+def MyHandler(free_vars,pool_size, varstatus):
 
-    def populate_queue(freevars,inputqueue):
+    def populate_queue(freevars,inputqueue, counter):
         for v in freevars:
-            if freevars[v][0] != freevars[v][1]:
+            if freevars[v].lb != freevars[v].ub:
                 inputqueue.put(v) # dont have to pickle just needs to be pickeable
                 counter+=1
-        return counter
+        print('(MASTER): COMPLETED LOADING QUEUE WITH TASKS WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+        return inputqueue, counter
+    
+    def killswitch(pool_size, iq):
+        for i in range(pool_size*2):
+            iq.put((None,None))
+        print('(MASTER): COMPLETED LOADING QUEUE WITH NONES WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+
 
     iq = mp.Queue()
     oq = mp.Queue()
-    while not STOP:
-        populate_queue(free_vars,iq) #only free variables are populated
-        myprocesses = [mp.process(target=varProb,args=(iq,oq) for _ in range(pool_size))]
+    Stop = False
+    counter=0
+    while not Stop:
+        Stop = True
+        iq, counter = populate_queue(free_vars,iq,counter) #only free variables are populated
+        print(counter)
+        myprocesses = [mp.process(target=varProb,args=(iq,oq)) for _ in range(pool_size)]
+        print(iq)
         for p in myprocesses:
             p.start()
+
         #manage output queue
+        while count < counter+1: ## may be <=?
+            try: 
+                result = oq.get()
+                if result[0]==1:
+                    count+=1
+                    my_message = result[1]
+                    if 'infesible' in my_message:
+                        var_status[v] = (0,0)
+                        free_vars[my_message[0]].lb=0
+                        free_vars[my_message[0]].ub=0
+                        Stop=False
+                        NFLmodel.update()
+                    print(my_message)
+                elif result[0] == 0:
+                    my_message = result[1]
+                    print(my_message)
+                else:
+                    print(result)
+            except:
+                time.sleep(.5)
+            NFLmodel.write('updated.lp')
+        if Stop = True:
+            killswitch()
+# stop the routine from moving forward until all processes have completed
+    # their assigned task.  Without this, you will get an error
+    for p in my_processes:
+        p.join()
 
-        #if result[2]=='infesible' stop = FALSE
+    # now that all processes are completed, terminate them all - you don't want
+    # to tie up the CPU with zombie processes
+    for p in my_processes:
+        p.terminate()
 
-        #join 
-        #terminate
-        #final checks
+    number_tasks = oq.qsize()
+    for i in range(number_tasks):
+        print(oq.get_nowait()[1])
 
+    # There may be some left over "Nones" in the input queue.  Let's clear 
+    # them out since we want to account for all tasks (good housekeeping)
+    number_tasks = iq.qsize()
+    for i in range(number_tasks):
+        try:
+            iq.get_nowait()
+        except:
+            pass
+
+    print('(MASTER): COMPLETED FLUSHING QUEUE WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+    return free_vars
 def main():
+
+    #load constraints
+    set_constrained_variables()
+    free_vars, var_status = get_variables()
+    free_vars, var_status = MyHandler(free_vars,pool_size, var_status) #do probing and all that parallel
+    write = pd.DataFrame.from_dict(var_status,orient="index") #write solution
+    write.to_csv("GameBounds.csv")
+    NFLmodel.write('updated.lp')
+    print('(MASTER):  ALL PROCESSES HAVE COMPLETED WITH A TOTAL RUN TIME OF %s' % (time.mktime(time.localtime())-time.mktime(start_time)))
+
+if __name__ == "__main__":
+    start_time = time.localtime()
+    #set worker information
     pool_size = 4
-    GETVARS()
-    FindZeros()
-    MYHandler()
+    my_seed = 11111124
+    random.seed(my_seed)
+    #load model
+    NFLmodel=grb.read('OR604 Model File v2.lp')
+    main()
