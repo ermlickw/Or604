@@ -67,7 +67,7 @@ def cleanfreevars(free_vars,var_status):
 def fix_impossible_games(free_vars,var_status):
     start=time.time()
     NFLmodel.setParam('OutputFlag', False )
-    NFLmodel.setParam('TimeLimit',2)
+    NFLmodel.setParam('TimeLimit',5)
     NFLmodel.write('updated.lp') #first time only
     
     print('Starting...')
