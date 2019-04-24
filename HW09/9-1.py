@@ -96,7 +96,6 @@ def fix_impossible_games(free_vars,var_status):
 
 
 
-
 if __name__ == "__main__":
     #load model
     NFLmodel=grb.read('OR604 Model File v2.lp')
