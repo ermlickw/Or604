@@ -68,8 +68,8 @@ def cleanfreevars(free_vars,var_status):
 def varProb(iq,oq):
     NFLR = grb.read('updated.lp')
     NFLR.setParam('OutputFlag', False )
-    NFLR.setParam('timelimit',10)
-    NFLR.setParam('threadlimit',1)
+    NFLR.setParam('TimeLimit',10)
+    NFLR.setParam('Threads',1)
     
     while True:
         try:
@@ -184,13 +184,12 @@ def MyHandler(free_vars,pool_size, var_status, start_time, NFLmodel):
     return free_vars, var_status
 def main():
 
-    #load constraintsfd
+    #load constraints
     set_constrained_variables()
     free_vars, var_status = get_variables()
     free_vars, var_status = MyHandler(free_vars,pool_size, var_status, start_time, NFLmodel) #do probing and all that parallel
     write = pd.DataFrame.from_dict(var_status,orient="index") #write solution
     write.to_csv("GameBounds.csv")
-    NFLmodel.write('updated.lp')
     print('(MASTER):  ALL PROCESSES HAVE COMPLETED WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
 
 if __name__ == "__main__":
