@@ -7,7 +7,8 @@ import random
 import time
 import colorama
 from colorama import Fore, Back, Style
-colorama.init()
+from termcolor import colored
+colorama.init(autoreset=True)
 
 def set_constrained_variables():
     '''
@@ -65,7 +66,7 @@ def cleanfreevars(free_vars,var_status):
     return free_vars
 
 def varProb(iq,oq):
-    NFLR = grb.read('OR604 Model File v2.lp')
+    NFLR = grb.read('updated.lp')
     NFLR.setParam('OutputFlag', False )
     NFLR.setParam('timelimit',10)
     NFLR.setParam('threadlimit',1)
@@ -85,10 +86,12 @@ def varProb(iq,oq):
                 if NFLR.Status == grb.GRB.INFEASIBLE:
                     myVar.lb = 0
                     myVar.ub = 0
-                    mymessage = task + ' -- is infeasible Time: ' + str(time.mktime(time.localtime())-time.mktime(start_time))
+                    NFLR.update()
+                    mymessage =   task + ' -- is infeasible Time: ' + str(time.mktime(time.localtime())-time.mktime(start_time))
                 else:
                     myVar.lb = 0
-                    mymessage = task + ' -- is good. Time: '  + str(time.mktime(time.localtime())-time.mktime(start_time))
+                    NFLR.update()
+                    mymessage =  Fore.BLACK + Back.GREEN +task + ' -- is good. Time: '  + str(time.mktime(time.localtime())-time.mktime(start_time))
                 NFLR.update()
                 oq.put((1,mymessage))
             except:
@@ -109,15 +112,17 @@ def MyHandler(free_vars,pool_size, var_status, start_time, NFLmodel):
         return inputqueue, counter
     
     def killswitch(pool_size, iq):
-        for i in range(pool_size*2):
+        for i in range(pool_size*10):
             iq.put((None,None))
         print('(MASTER): COMPLETED LOADING QUEUE WITH NONES WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
 
-
+    NFLmodel.write('updated.lp')
     iq = mp.Queue()
     oq = mp.Queue()
     Stop = False
     while not Stop:
+        iq = mp.Queue()
+        oq = mp.Queue()
         Stop = True
         counter=0
         iq, counter = populate_queue(free_vars,iq,counter) #only free variables are populated
@@ -144,23 +149,23 @@ def MyHandler(free_vars,pool_size, var_status, start_time, NFLmodel):
                     print( my_message + ' Queue: ' + str(count) + '/' + str(counter) )
                 elif result[0] == 0:
                     my_message = result[1]
-                    print( Back.GREEN + Fore.BLACK + my_message + ' Queue: ' + str(count) + '/' + str(counter) )
+                    print(  my_message + ' Queue: ' + str(count) + '/' + str(counter))
                 else:
                     print(result)
             except:
                 time.sleep(.5)
         NFLmodel.write('updated.lp')
     
-    killswitch(pool_size,iq)
+        killswitch(pool_size,iq)
 # stop the routine from moving forward until all processes have completed
     # their assigned task.  Without this, you will get an error
-    for p in myprocesses:
-        p.join()
+        for p in myprocesses:
+            p.join()
 
-    # now that all processes are completed, terminate them all - you don't want
-    # to tie up the CPU with zombie processes
-    for p in myprocesses:
-        p.terminate()
+        # now that all processes are completed, terminate them all - you don't want
+        # to tie up the CPU with zombie processes
+        for p in myprocesses:
+            p.terminate()
 
     number_tasks = oq.qsize()
     for i in range(number_tasks):
@@ -179,7 +184,7 @@ def MyHandler(free_vars,pool_size, var_status, start_time, NFLmodel):
     return free_vars, var_status
 def main():
 
-    #load constraints
+    #load constraintsfd
     set_constrained_variables()
     free_vars, var_status = get_variables()
     free_vars, var_status = MyHandler(free_vars,pool_size, var_status, start_time, NFLmodel) #do probing and all that parallel

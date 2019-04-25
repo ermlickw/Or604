@@ -83,10 +83,12 @@ def fix_impossible_games(free_vars,var_status):
                 var_status[v] = (0,0)
                 free_vars[v].lb = 0
                 free_vars[v].ub = 0
+                NFLmodel.update()
                 stop = False
                 print(str(v) + ' is fixed to zero')
             else:
                 free_vars[v].lb = 0
+                NFLmodel.update()
                 print(str(v) + ' is free')
             NFLmodel.update()
         free_vars = cleanfreevars(free_vars,var_status)
