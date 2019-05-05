@@ -3021,3 +3021,2957 @@ Reading time = 0.58 seconds
 Read LP format model from file updated.lp
 Reading time = 0.60 seconds
 : 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:45:50
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:47:56
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.53 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:49:27
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:50:17
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:51:48
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:53:23
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.54 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:55:48
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.53 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:56:08
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.53 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:57:19
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:58:02
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:58:06
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:58:06
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:58:06
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 12:58:06
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Error reading LP format file updated.lp at line 322751
+Error reading LP format file updated.lp at line 321596
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file updated.lp at line 8918
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 9335
+Error reading LP format file updated.lp at line 9404
+Incomplete constraint
+Error reading LP format file updated.lp at line 9541
+Incomplete constraint
+Malformed term in expression
+
+ighboring tokens: " + GO_NYG_DAL_Sun_PRIME_ NBC_4 + GO_DAL_NYG_Sun_PRIME_NBC_4 "
+
+Error reading LP format file updated.lp at line 16843
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 17051
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 18176
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 25910
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 35654
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 39637
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 42352
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 51625
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 62512
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 68799
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 72206
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 76040
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 96345
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 113759
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 117491
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 127372
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 179020
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 194935
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 202905
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 210545
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 261673
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 303359
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 306122
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 329984
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 431991
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 483502
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 492216
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 531501
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 53183
+
+Error reading LP format file updated.lp at line 150352
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file updated.lp at line 8296
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 8642
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 13056
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 14285
+Malformed term in expression
+Neighboring tokens: " + GO_LAR_JAC_ Sun_EARLY_CBS_11 + GO_LAR_JAC_Sun_EARLY_FOX_11 "
+
+Error reading LP format file updated.lp at line 19239
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 19994
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 22683
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 27833
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 36128
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 37705
+Malformed term in expression
+Neighboring tokens: " + G O_ATL_NO_Mon_PRIME_ESPN_2 + GO_NO_ATL_Sun_EARLY_CBS_2 "
+
+Error reading LP format file updated.lp at line 42625
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 52974
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 63317
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 69322
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 72206
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 90498
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 96888
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 105638
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 107654
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 142075
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 147276
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 164967
+Error reading LP format file updated.lp at line 165098
+Incomplete constraint
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 237757
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 249157
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 270035
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 284118
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 408855
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 426476
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 447485
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 486612
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 179368
+Error reading LP format file updated.lp at line 385577
+Error reading LP format file updated.lp at line 289813
+Error reading LP format file updated.lp at line 331835
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Malformed term in expression
+
+
+
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 11572
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 12580
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 14688
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 16373
+Malformed term in expression
+Neighboring tokens: " + GO_TE N_MIA_Sun_EARLY_CBS_4 + GO_TEN_MIA_Mon_PRIME_ESPN_4 "
+
+Error reading LP format file updated.lp at line 21836
+Error reading LP format file updated.lp at line 21910
+Incomplete constraint
+
+complete constraint
+
+Error reading LP format file updated.lp at line 27833
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file updated.lp at line 28578
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 37984
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 40758
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 52739
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 53545
+Malformed term in expression
+Neighboring tokens: " + GO_TB_MI N_Sun_EARLY_FOX_12 + GO_TB_MIN_Sun_EARLY_CBS_12 "
+
+Error reading LP format file updated.lp at line 73358
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 76572
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 89472
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 93901
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 125248
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 129074
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 152106
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 161387
+Malformed term in expression
+Neighboring tokens: " + GO_NYG_DAL_Sun_PR IME_NBC_2 + GO_NYG_DAL_Sun_EARLY_FOX_2 "
+
+Error reading LP format file updated.lp at line 213601
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 232205
+Malformed term in expression
+Neighboring tokens: " + GO_DET_NYG_Sun_PR IME_NBC_17 + GO_DET_MIN_Thu_PRIME_NBC_1 "
+
+Error reading LP format file updated.lp at line 261135
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 274377
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 320917
+Malformed term in expression
+Neighboring tokens: " + GO_NO_TB_Mon_P RIME_ESPN_14 + GO_DET_NO_Mon_PRIME_ESPN_15 "
+
+Error reading LP format file updated.lp at line 380451
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 441131
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 452165
+Incomplete constraint
+
+Error reading LP format file updated.lp at line 533356
+Incomplete constraint
+
+Read LP format model from file updated.lp
+Reading time = 0.71 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file updated.lp
+Reading time = 0.72 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file updated.lp
+Reading time = 0.70 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file updated.lp
+Reading time = 0.68 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:00:28
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:01:27
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:01:30
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:01:30
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:01:30
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:01:30
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Read LP format model from file temp.lp
+Reading time = 0.76 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.77 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.79 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.80 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:02:49
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:03:20
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:03:24
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:03:24
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:03:24
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:03:24
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Error reading LP format file temp.lp at line 258008
+Error reading LP format file temp.lp at line 273043
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Malformed term in expression
+
+
+
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 6944
+Error reading LP format file temp.lp at line 6944
+Error reading LP format file temp.lp at line 7079
+Incomplete constraint
+Incomplete constraint
+
+
+
+Error reading LP format file temp.lp at line 9472
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 14961
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 16438
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 16706
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 18842
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 25504
+Malformed term in expression
+Neighboring tokens: " M 4_WAS_HOU: <= 0 M1_WAS_IND: >= 0 M2_WAS_IND: "
+
+Error reading LP format file temp.lp at line 26519
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 30043
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 32115
+Malformed term in expression
+Neighboring tokens: " + GO_BUF_CAR_Sun_EARLY _CBS_8 + GO_BUF_CAR_Sun_EARLY_FOX_8 "
+
+Error reading LP format file temp.lp at line 47227
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 47436
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 52129
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 60002
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 75640
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 75972
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 82507
+Malformed term in expression
+Neighboring tokens: " + GO_IND_BUF_Mon _PRIME_ESPN_4 + GO_IND_TEN_Mon_PRIME_ESPN_4 "
+
+Error reading LP format file temp.lp at line 104037
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 128047
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 132433
+Malformed term in expression
+Neighboring tokens: " + GO_ NE_MIA_Sun_PRIME_NBC_4 + GO_NE_NYJ_Mon_PRIME_ESPN_4 "
+
+Error reading LP format file temp.lp at line 152040
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 158789
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 222302
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 222836
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 223425
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 260141
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 352973
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 355470
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 376202
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 409059
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 482513
+Error reading LP format file temp.lp at line 491867
+Error reading LP format file temp.lp at line 402422
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file temp.lp at line 11978
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 12711
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 13734
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 14961
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22820
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 23529
+Malformed term in expression
+Neighboring tokens: " + GO_KC_HOU_Sun_EARLY_CB S_13 + GO_KC_HOU_Sun_EARLY_FOX_13 "
+
+Error reading LP format file temp.lp at line 26224
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 30632
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 39223
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 39850
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 46326
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 53830
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 72206
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 73561
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 74239
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 87245
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 121833
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 129076
+Malformed term in expression
+Neighboring tokens: " + GO_SF_ARZ_Su n_LATE_FOX_12 + GO_SF_ARZ_Sun_LATE_FOX_13 "
+
+Error reading LP format file temp.lp at line 136737
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 141656
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 196026
+Malformed term in expression
+Neighboring tokens: " + GO_NYG_ARZ_Sun_DBLH_FOX_ 5 + GO_DAL_ARZ_Mon_PRIME_ESPN_5 "
+
+Error reading LP format file temp.lp at line 216073
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 222571
+Malformed term in expression
+Neighboring tokens: " + GO_JAC_TE N_Sun_EARLY_FOX_12 + GO_TEN_JAC_Sun_EARLY_FOX_12 "
+
+Error reading LP format file temp.lp at line 233697
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 297649
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 361557
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 384360
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 426882
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 396768
+Error reading LP format file temp.lp at line 546279
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Unrecognized variable bound
+
+
+
+Neighboring tokens: " TF_756105_HOU_6_Sun_sgDBLH_sgPRIME <= "
+
+Error reading LP format file temp.lp at line 6406
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8437
+Error reading LP format file temp.lp at line 8438
+Incomplete constraint
+ssion
+Neighboring tokens: " + GO_ GB_MIN_Mon_PRIME_ESPN_8 + GO_MIN_GB_Mon_PRIME_ESPN_8 "
+
+
+Error reading LP format file temp.lp at line 9056
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 16569
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 19725
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22224
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22890
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 28861
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 36333
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 43254
+Malformed term in expression
+Neighboring tokens: " + GO _DET_CIN_Sun_EARLY_CBS_8 + GO_DET_CIN_Sun_EARLY_FOX_8 "
+
+Error reading LP format file temp.lp at line 43740
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 49877
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 68598
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 70187
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 72206
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 88047
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 110934
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 116075
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 116548
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 134472
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 169138
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 175965
+Malformed term in expression
+Neighboring tokens: " + GO_TEN_PIT_Mon_PRIME_E SPN_6 >= 1 HH_756431_4_PIT: "
+
+Error reading LP format file temp.lp at line 190385
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 196985
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 255946
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 270308
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 301476
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 305513
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 397885
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 424258
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 494089
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 511163
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 397424
+Error reading LP format file temp.lp at line 145144
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file temp.lp at line 6140
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 7146
+Malformed term in expression
+Neighboring tokens: " + GO_IN D_LAR_Sun_LATE_CBS_13 + GO_DEN_IND_Sun_DBLH_CBS_13 "
+
+Error reading LP format file temp.lp at line 7480
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 8506
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 15697
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 17410
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 18640
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 19994
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 33793
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 34762
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 36399
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 39929
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 60763
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 61325
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 65051
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 74103
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 91448
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 92877
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 112089
+Malformed term in expression
+Neighboring tokens: " + GO_NE_BUF_Thu _PRIME_NFL_9 + GO_NE_NO_Thu_PRIME_NFL_9 "
+
+Error reading LP format file temp.lp at line 120631
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 158256
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 167056
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 188198
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 210340
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 248298
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 274918
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 323459
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 358648
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 399866
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 449546
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 491102
+r section
+Error reading LP format file temp.lp at line 356089
+Malformed term in expression
+Neighboring tokens: " + "
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 9056
+Incomplete constraint
+
+Read LP format model from file temp.lp
+Reading time = 0.66 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.78 seconds
+: 25888 rows, 19167 columns, 1028139 nonzeros
+Error reading LP format file temp.lp at line 11435
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20570
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 21836
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 34062
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 39223
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 60066
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 75705
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 105969
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 122179
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 179628
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 196707
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 293082
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 323720
+Malformed term in expression
+Neighboring tokens: " + "
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:05:56
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:07:00
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:07:55
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:07:59
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:07:59
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:07:59
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:07:59
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Read LP format model from file temp.lp
+Reading time = 0.72 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.74 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.75 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.82 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:09:14
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.53 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:09:45
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.53 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:09:49
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:09:49
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:09:49
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:09:49
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Error reading LP format file temp.lp at line 277873
+Error reading LP format file temp.lp at line 273043
+Malformed term in expression
+Unrecognized constraint RHS or sense
+Incomplete constraint
+Incomplete constraint
+Neighboring tokens: " >= "
+Neighboring tokens: " + "
+
+
+
+
+Error reading LP format file temp.lp at line 8849
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 9404
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 13056
+Incomplete constraint
+Error reading LP format file temp.lp at line 13260
+
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20219
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 23026
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 25573
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 30985
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41519
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 45209
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 45904
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 54840
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 65919
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 73224
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 79267
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 96617
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 106307
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 116212
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 124581
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 147343
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 148371
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 187863
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 214787
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 239372
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 239633
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 278749
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 338366
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 365202
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 366838
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 420887
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 446938
+Error reading LP format file temp.lp at line 489034
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+Incomplete constraint
+
+
+
+Error reading LP format file temp.lp at line 8368
+Malformed term in expression
+Neighboring tokens: " + GO_NO_GB_ Sun_DBLH_FOX_5 + GO_DET_GB_Sun_DBLH_FOX_5 "
+
+Error reading LP format file temp.lp at line 11910
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 13260
+Error reading LP format file temp.lp at line 13260
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22820
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 27562
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 30397
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 32114
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 37437
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 46820
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 55549
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 56720
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 66320
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 87245
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 103442
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 104105
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 111948
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 142622
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 159053
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 161116
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 181576
+Malformed term in expression
+Neighboring tokens: " + GO_ ATL_CHI_Sun_EARLY_FOX_15 + GO_CAR_CHI_Sun_EARLY_FOX_15 "
+
+Error reading LP format file temp.lp at line 232004
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 253749
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 258008
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 291336
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 371268
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 395676
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 398610
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 486070
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 390670
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file temp.lp at line 10551
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 13328
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 15162
+Error reading LP format file temp.lp at line 15162
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 26224
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 30109
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 32036
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 34620
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 47436
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 53544
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 55618
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 62168
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 82309
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 87515
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 101098
+Malformed term in expression
+Neighboring tokens: " + GO_IND_CIN _Mon_PRIME_ESPN_4 + GO_IND_CIN_Sun_EARLY_CBS_5 "
+
+Error reading LP format file temp.lp at line 115939
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 142213
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 143029
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 167585
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 185432
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 222503
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 223359
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 258734
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 294645
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 383227
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 387136
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 445223
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 496367
+Malformed term in expression
+Neighboring tokens: " + GO_NO_ATL_Mon_PR IME_ESPN_13 + GO_MIN_ATL_Mon_PRIME_ESPN_13 "
+
+Error reading LP format file temp.lp at line 273376
+Error reading LP format file temp.lp at line 432836
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file temp.lp at line 8161
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8849
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 9126
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 10211
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 19659
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20289
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 21910
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22683
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41249
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 42352
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 42552
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 49055
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 67316
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 68665
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 77995
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 80523
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 101230
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 104638
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 114373
+Incomplete constraint
+Error reading LP format file temp.lp at line 114649
+
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 159053
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 159520
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 159787
+Malformed term in expression
+Neighboring tokens: " + GO_KC_NYJ_Sun_EARLY_CB S_16 + GO_KC_NYJ_Sun_EARLY_FOX_16 "
+
+Error reading LP format file temp.lp at line 184032
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 260932
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 265938
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 268136
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 322738
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 440999
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 442613
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 447889
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 535889
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 258008
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file temp.lp at line 5736
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 7749
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8367
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8575
+Malformed term in expression
+Neighboring tokens: " + GO_MIN_GB_ Mon_PRIME_ESPN_14 + BYE_GB_14 = "
+
+Error reading LP format file temp.lp at line 13665
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 16104
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 16371
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 17265
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 26156
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 26654
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 31200
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 34483
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 55197
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 56720
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 60835
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 63452
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 80062
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 86852
+Malformed term in expression
+Neighboring tokens: " + GO_OAK_KC_ Sun_EARLY_CBS_11 + GO_OAK_KC_Mon_PRIME_ESPN_11 "
+
+Error reading LP format file temp.lp at line 90428
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 98816
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 128457
+Malformed term in expression
+Neighboring tokens: " + GO_LAR_DAL_Sun_EARLY_FOX_ 13 + GO_LAR_JAC_Sun_EARLY_FOX_13 "
+
+Error reading LP format file temp.lp at line 134339
+Malformed term in expression
+Neighboring tokens: " + GO_BAL_OAK_Sun_L ATE_CBS_9 + GO_BAL_GB_Sun_EARLY_CBS_9 "
+
+Error reading LP format file temp.lp at line 145242
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 156438
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 213750
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 225446
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 237555
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 256615
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 366838
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 371901
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 423117
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 426273
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 314361
+Error reading LP format file temp.lp at line 405301
+Error reading LP format file temp.lp at line 412012
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file temp.lp at line 10412
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 11161
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 12046
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 12645
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20983
+Malformed term in expression
+Neighboring tokens: " + GO_HOU_SEA_Mon_PRIME_ESPN _2 + GO_HOU_SEA_Sun_LATE_CBS_2 "
+
+Error reading LP format file temp.lp at line 21471
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22293
+Malformed term in expression
+Neighboring tokens: " + GO_HOU_NE_Th u_PRIME_NBC_1 + GO_HOU_NE_Sun_PRIME_NBC_1 "
+
+Error reading LP format file temp.lp at line 26806
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 40825
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 42148
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 44744
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 55479
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 76241
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 77926
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 79667
+Malformed term in expression
+Neighboring tokens: " + GO_CIN_GB_Sun_EARLY _CBS_6 + GO_CIN_JAC_Sun_EARLY_CBS_6 "
+
+Error reading LP format file temp.lp at line 94446
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 129417
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 131563
+Malformed term in expression
+Neighboring tokens: " + GO_MIA_NE_Sun_P RIME_NBC_10 + GO_MIA_NE_Sun_DBLH_CBS_10 "
+
+Error reading LP format file temp.lp at line 134935
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 155315
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 196777
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 201114
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 220406
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 244762
+Malformed term in expression
+Neighboring tokens: " + GO_MIA_BUF_Mon_P RIME_ESPN_5 + GO_BUF_MIA_Mon_PRIME_ESPN_5 "
+
+Error reading LP format file temp.lp at line 300396
+Malformed term in expression
+Neighboring tokens: " + GO_LAC_NYG_ Sun_PRIME_NBC_13 + GO_WAS_LAC_Sun_PRIME_NBC_13 "
+
+Error reading LP format file temp.lp at line 321565
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 359527
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 405909
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 494928
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 536659
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 145750
+Error reading LP format file temp.lp at line 356898
+Error reading LP format file temp.lp at line 491656
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+
+Error reading LP format file temp.lp at line 7411
+Error reading LP format file temp.lp at line 7411
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 11572
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 12513
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20433
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22820
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 25774
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 30919
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 36825
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 39223
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 43809
+Malformed term in expression
+Neighboring tokens: " + GO_DET_GB_S un_DBLH_FOX_11 + GO_GB_DET_Sun_DBLH_FOX_11 "
+
+Error reading LP format file temp.lp at line 51293
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 62916
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 70984
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 79866
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 84223
+Malformed term in expression
+Neighboring tokens: " + GO_TEN_CLE_Sun_EARLY_CBS _14 >= 1 HA_755733_10_TEN: "
+
+Error reading LP format file temp.lp at line 106374
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 118227
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 138003
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 149246
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 177888
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 199530
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 227872
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 255497
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 280028
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 319875
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 400549
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 402372
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 445090
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 365790
+Error reading LP format file temp.lp at line 373216
+r section
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+Error reading LP format file temp.lp at line 10277
+Error reading LP format file temp.lp at line 10412
+Incomplete constraint
+
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 11231
+Incomplete constraint
+
+Read LP format model from file temp.lp
+Reading time = 0.71 seconds
+: 25888 rows, 19167 columns, 1028139 nonzeros
+Error reading LP format file temp.lp at line 19370
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20289
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 20982
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 32885
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 34688
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 38937
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 63248
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 64523
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 69127
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 94243
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 95601
+Malformed term in expression
+Neighboring tokens: " + GO_NYJ_TB_T hu_PRIME_NFL_2 + GO_NYJ_TB_Sun_EARLY_FOX_2 "
+
+Error reading LP format file temp.lp at line 101624
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 143564
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 152309
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 155712
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 231937
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 235567
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 257942
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 379449
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 395006
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 420887
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 345748
+Error reading LP format file temp.lp at line 528679
+Error reading LP format file temp.lp at line 446019
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+Error reading LP format file temp.lp at line 7144
+Error reading LP format file temp.lp at line 7209
+Incomplete constraint
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 9472
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22450
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 23389
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 23757
+Malformed term in expression
+Neighboring tokens: " + GO_NYG_DEN_Mon_PRIME_ESPN _13 + GO_NYG_DEN_Sun_PRIME_NBC_14 "
+
+Error reading LP format file temp.lp at line 35785
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 41114
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41455
+Malformed term in expression
+Neighboring tokens: " GO_DEN_PHI_Mon_ PRIME_ESPN_1 + GO_DEN_PHI_Thu_PRIME_NBC_1 "
+
+Error reading LP format file temp.lp at line 63181
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 77314
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 77995
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 97616
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 119498
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 120833
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 156103
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 177556
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 204823
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 248891
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 276358
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 304532
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 430953
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 456741
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 528945
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 315162
+Error reading LP format file temp.lp at line 261349
+Error reading LP format file temp.lp at line 57629
+Incomplete constraint
+Incomplete constraint
+Incomplete constraint
+
+
+
+Error reading LP format file temp.lp at line 7547
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8574
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8918
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 17332
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 19791
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 23115
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 43809
+Malformed term in expression
+Neighboring tokens: " + GO_DET_GB_S un_DBLH_FOX_11 + GO_GB_DET_Sun_DBLH_FOX_11 "
+
+Error reading LP format file temp.lp at line 44662
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 48922
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 72825
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 80390
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 88182
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 130892
+Malformed term in expression
+Neighboring tokens: " + GO_MIA_NE_Sun _PRIME_NBC_3 + GO_MIA_NE_Sun_EARLY_CBS_4 "
+
+Error reading LP format file temp.lp at line 143029
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 151500
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 208696
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 222370
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 231937
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 298975
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 367035
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 371688
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 476703
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 176556
+Error reading LP format file temp.lp at line 421971
+Error reading LP format file temp.lp at line 481532
+Incomplete constraint
+Incomplete constraint
+
+Malformed term in expression
+
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 12179
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 14554
+Error reading LP format file temp.lp at line 14688
+Incomplete constraint
+
+complete constraint
+
+Error reading LP format file temp.lp at line 38704
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41667
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 44943
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 76174
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 80784
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 84351
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 128795
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 138733
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 143898
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 221690
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 223823
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 259803
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 339279
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 339554
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 414050
+Malformed term in expression
+Neighboring tokens: " + GO_TB_ MIN_Sun_EARLY_FOX_7 + GO_TB_MIN_Thu_PRIME_NFL_8 "
+
+Error reading LP format file temp.lp at line 358870
+Incomplete constraint
+Malformed term in expression
+Incomplete constraint
+Neighboring tokens: " + "
+
+
+Error reading LP format file temp.lp at line 7958
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8296
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8987
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20064
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 24730
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 28490
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41319
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 43252
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 47633
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 69723
+Malformed term in expression
+Neighboring tokens: " + GO_A TL_NO_Sun_EARLY_FOX_4 + GO_ATL_DET_Sun_EARLY_FOX_4 "
+
+Error reading LP format file temp.lp at line 71383
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 81446
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 115193
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 119366
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 145993
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 197720
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 201574
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 258210
+Malformed term in expression
+Neighboring tokens: " + GO_PH I_KC_Mon_PRIME_ESPN_15 + GO_WAS_KC_Sun_PRIME_NBC_15 "
+
+Error reading LP format file temp.lp at line 334156
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 339486
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 420544
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 354835
+Error reading LP format file temp.lp at line 532626
+Incomplete constraint
+Incomplete constraint
+
+
+Error reading LP format file temp.lp at line 11300
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 11435
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 11776
+Malformed term in expression
+Neighboring tokens: " + G O_GB_DAL_Sun_PRIME_NBC_15 + GO_KC_DAL_Sun_DBLH_CBS_15 "
+
+Error reading LP format file temp.lp at line 21051
+Unrecognized constraint RHS or sense
+Neighboring tokens: " > "
+
+Error reading LP format file temp.lp at line 22684
+Malformed term in expression
+Neighboring tokens: " + GO_ KC_DEN_Sun_DBLH_CBS_12 + GO_DEN_KC_Sun_DBLH_CBS_12 "
+
+Error reading LP format file temp.lp at line 28424
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 38937
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 45974
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 53760
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 68799
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 80591
+Malformed term in expression
+Neighboring tokens: " + GO_CLE_CIN _Sun_EARLY_FOX_9 + GO_CLE_CIN_Sun_EARLY_CBS_10 "
+
+Error reading LP format file temp.lp at line 89472
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 105106
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 125181
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 134270
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 166123
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 196917
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 208835
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 291734
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 330384
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 367574
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 480429
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 498501
+Warning: unknown variable 'GO_DE' in integer section
+Error reading LP format file temp.lp at line 217188
+Incomplete constraint
+
+complete constraint
+
+Error reading LP format file temp.lp at line 10412
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 10820
+Incomplete constraint
+
+Read LP format model from file temp.lp
+Reading time = 0.72 seconds
+: 25888 rows, 19167 columns, 1028139 nonzeros
+Error reading LP format file temp.lp at line 23689
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 25151
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 47436
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 47919
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 78733
+Malformed term in expression
+Neighboring tokens: " + GO_ BAL_GB_Sun_EARLY_CBS_2 + GO_BAL_JAC_Sun_EARLY_CBS_2 "
+
+Error reading LP format file temp.lp at line 90292
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 118092
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 133189
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 187525
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 207588
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 302290
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 326694
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 518306
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 551241
+Error reading LP format file temp.lp at line 78650
+Unrecognized variable bound
+
+Neighboring tokens: " GO_CLE_HOU_Sun_EARLY_FOX_10 "
+
+Error reading LP format file temp.lp at line 10010
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 11910
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20359
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 26156
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 49254
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 51757
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 87515
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 88522
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 146599
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 147007
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 240495
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 255098
+Malformed term in expression
+Neighboring tokens: " + GO _LAC_JAC_Sun_EARLY_CBS_7 + GO_LAC_KC_Sun_EARLY_FOX_7 "
+
+Error reading LP format file temp.lp at line 359527
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 370631
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 435697
+Incomplete constraint
+
+
+Error reading LP format file temp.lp at line 6810
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8296
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 19858
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20570
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 40258
+Malformed term in expression
+Neighboring tokens: " + GO_JA C_IND_Sun_EARLY_CBS_15 + GO_IND_JAC_Sun_EARLY_CBS_16 "
+
+Error reading LP format file temp.lp at line 41587
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 72959
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 76900
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 118893
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 127509
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 209042
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 215503
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 313005
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 323524
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 529811
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 533421
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41111
+Error reading LP format file temp.lp at line 51780
+Incomplete constraint
+ssion
+
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 8712
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 9126
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 19042
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 19994
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 35177
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 36266
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 55197
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 60485
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 91854
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 100897
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 153391
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 169546
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 241429
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 284867
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 390020
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 517776
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 86039
+Error reading LP format file temp.lp at line 389552
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 8918
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 9335
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 20064
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 24600
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 36758
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41319
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 66054
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 71313
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 114032
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 130759
+Malformed term in expression
+Neighboring tokens: " + GO_B UF_MIA_Sun_EARLY_CBS_14 + GO_BUF_ATL_Sun_EARLY_FOX_14 "
+
+Error reading LP format file temp.lp at line 206105
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 220951
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 388625
+Incomplete constraint
+Error reading LP format file temp.lp at line 388761
+
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 423831
+Incomplete constraint
+
+
+Error reading LP format file temp.lp at line 11026
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 15296
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 23897
+Unrecognized constraint RHS or sense
+Neighboring tokens: " >= "
+
+Error reading LP format file temp.lp at line 35109
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 45078
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 62648
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 77858
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 93492
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 134406
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 150197
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 210137
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 261067
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 360948
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 396895
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 392271
+Error reading LP format file temp.lp at line 418198
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 7889
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 9742
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 19590
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22156
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 43539
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 53262
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 86243
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 87048
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 134067
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 134472
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 216632
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 233502
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 341639
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 384494
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 355224
+Incomplete constraint
+
+
+Error reading LP format file temp.lp at line 8782
+Malformed term in expression
+Neighboring tokens: " + GO_NE_MIA _Sun_DBLH_CBS_8 + GO_NE_NO_Sun_DBLH_CBS_8 "
+
+Error reading LP format file temp.lp at line 11436
+Malformed term in expression
+Neighboring tokens: " + GO_D ET_CHI_Sat_PRIME_NFL_16 + GO_CHI_DET_Sat_PRIME_NFL_16 "
+
+Error reading LP format file temp.lp at line 27222
+Malformed term in expression
+Neighboring tokens: " + GO_BUF _KC_Sun_EARLY_FOX_15 + GO_BUF_KC_Sun_EARLY_CBS_15 "
+
+Error reading LP format file temp.lp at line 28265
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 49188
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 56655
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 76241
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 98816
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 141062
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 165719
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 250416
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 281308
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 406576
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 455713
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 288496
+Error reading LP format file temp.lp at line 205481
+Incomplete constraint
+
+
+Error reading LP format file temp.lp at line 11093
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 12244
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 21402
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 22224
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 41319
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 43049
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 71050
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 74306
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 107521
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 112561
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 173322
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 183899
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 289796
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 301340
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 458544
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 529678
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 217598
+Error reading LP format file temp.lp at line 58513
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 6275
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 7480
+Malformed term in expression
+Neighboring tokens: " + "
+
+Error reading LP format file temp.lp at line 15365
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 16304
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 26656
+Malformed term in expression
+Neighboring tokens: " + GO_NE_NYJ_Sun_EARLY_C BS_1 + GO_NYJ_NE_Thu_PRIME_NFL_2 "
+
+Error reading LP format file temp.lp at line 28659
+Malformed term in expression
+Neighboring tokens: " + GO_L AC_DAL_Sun_PRIME_NBC_1 + GO_LAC_DAL_Sun_EARLY_CBS_1 "
+
+Error reading LP format file temp.lp at line 47372
+Malformed term in expression
+Neighboring tokens: " GO_MIN_DET_Mon_PRIME_ESPN _1 + GO_MIN_DET_Thu_PRIME_NBC_1 "
+
+Error reading LP format file temp.lp at line 50663
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 75245
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 87582
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 127025
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 132432
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 190385
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 191175
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 316113
+Incomplete constraint
+
+Error reading LP format file temp.lp at line 318381
+Incomplete constraint
+
+Warning: unknown variable 'GO_TB_' in integer section
+Read LP format model from file temp.lp
+Reading time = 0.76 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.75 seconds
+: 25888 rows, 19167 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:11:27
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.53 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:11:31
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:11:31
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:11:31
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:11:31
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Read LP format model from file temp.lp
+Reading time = 0.72 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.72 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.79 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.80 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:15:35
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.77 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:16:45
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.83 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:17:52
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:17:56
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:17:56
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:17:56
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:17:56
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Read LP format model from file temp.lp
+Reading time = 0.71 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.74 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.75 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.76 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:20:04
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.52 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:20:08
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:20:08
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:20:08
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:20:08
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Read LP format model from file temp.lp
+Reading time = 0.80 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.80 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.80 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 0.82 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:21:04
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.80 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:28
+
+Academic license - for non-commercial use only
+Read LP format model from file OR604 Model File v2.lp
+Reading time = 0.53 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+
+Gurobi 8.1.0 (win64, Python) logging started 05/05/19 13:22:32
+
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Academic license - for non-commercial use only
+Read LP format model from file temp.lp
+Reading time = 1.02 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 1.03 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 1.05 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 1.07 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 1.12 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 1.14 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Read LP format model from file temp.lp
+Reading time = 1.16 seconds
+Read LP format model from file temp.lp
+: 25888 rows, 19166 columns, 1028139 nonzeros
+Reading time = 1.13 seconds
+: 25888 rows, 19166 columns, 1028139 nonzeros

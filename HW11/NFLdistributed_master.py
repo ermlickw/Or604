@@ -1,3 +1,8 @@
+from multiprocessing.managers import BaseManager
+import multiprocessing as mp 
+import traceback
+import random 
+import time 
 import gurobipy as grb
 import time
 import pandas as pd
@@ -32,7 +37,7 @@ def linkToQueue(my_server):
 
     return input_queue, output_queue
 
-    def set_constrained_variables():
+def set_constrained_variables():
     '''
     This function sets the games which must be zero based on the constraints to zero (i.e. zero upper and lower bound)
     '''
@@ -87,6 +92,15 @@ def cleanfreevars(free_vars,var_status):
                 free_vars.pop(v,None)
     return free_vars
 
+def populate_queue(freevars,inputqueue, varsleft, outercounter):
+    for v in freevars:
+        if freevars[v].lb != freevars[v].ub:
+            varname = 'GO_' + '_'.join(list(v))
+            inputqueue.put((outercounter,varname)) # dont have to pickle just needs to be pickeable - sending outerloop count and varaible to evaluate
+            varsleft+=1
+    print('(MASTER): COMPLETED LOADING QUEUE WITH TASKS WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
+    return inputqueue, varsleft
+
 def kill_switch(flood_size,iq):
     for i in range(flood_size*10):
         iq.put((None,None))
@@ -129,60 +143,46 @@ def MyHandler(free_vars, var_status, iq, oq, start_time, NFLmodel, Stop, outerco
     '''
     Main handler process to manage input queue and output queue 
     '''
-    def populate_queue(freevars,inputqueue, varsleft, outercounter):
-        for v in freevars:
-            if freevars[v].lb != freevars[v].ub:
-                varname = 'GO_' + '_'.join(list(v))
-                inputqueue.put((outercounter,varname)) # dont have to pickle just needs to be pickeable - sending outerloop count and varaible to evaluate
-                varsleft+=1
-        print('(MASTER): COMPLETED LOADING QUEUE WITH TASKS WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
-    return inputqueue, varsleft
-
     #manage input and output queue
     varsleft = 0
     iq, varsleft = populate_queue(free_vars,iq,varsleft, outercounter) #send variables to input queue to evaluate
-    print(varsleft)
+    print('NEW ROUND: ' + str(varsleft) + ' free variables left. ')
     Stop = True #loop prep
     innercount = 0
-        while innercount < varsleft: 
-            try: 
-                result = oq.get()
-                if result[0]==1:
-                    innercount+=1
-                    my_message = result[1]
-                    if 'infeasible' in my_message:
-                        m=tuple(my_message.split()[0][3:].split('_')) #format string back to freevar format
-                        var_status[m] = (0,0)
-                        free_vars[m].lb=0
-                        free_vars[m].ub=0
-                        Stop=False
-                        NFLmodel.update()
-                    print( my_message + ' Queue: ' + str(innercount) + '/' + str(varsleft) )
-                elif result[0] == 0:
-                    my_message = result[1]
-                    print(  my_message + ' Queue: ' + str(innercount) + '/' + str(varsleft))
-                else:
-                    print(result)
-            except:
-                time.sleep(.5)
+    while innercount < varsleft: 
+        try: 
+            result = oq.get()
+            if result[0]==1:
+                innercount+=1
+                my_message = result[1]
+                if 'infeasible' in my_message:
+                    m=tuple(my_message.split()[1][3:].split('_')) #format string back to freevar format
+                    var_status[m] = (0,0)
+                    free_vars[m].lb=0
+                    free_vars[m].ub=0
+                    Stop=False
+                    NFLmodel.update()
+                print( my_message + ' Queue: ' + str(innercount) + '/' + str(varsleft) )
+            elif result[0] == 0:
+                my_message = result[1]
+                print(  my_message + ' Queue: ' + str(innercount) + '/' + str(varsleft))
+            else:
+                print(result)
+        except:
+            time.sleep(.5)
             
-        NFLmodel.write('updated.lp')
+        NFLmodel.write('temp.lp')
     
 
     return free_vars, var_status, Stop
 
 
-def server_main(flood_size):
+def server_main(flood_size, free_vars, var_status):
     '''
     Main function
     '''
     # connect to the distributed queue
     iq, oq = linkToQueue(ip_address)
-    #model initial pruning
-    NFLmodel=grb.read('OR604 Model File v2.lp')
-    set_constrained_variables()
-    free_vars, var_status = get_variables()
-    NFLmodel.write('temp.lp') #write prelim reduced results
     Stop = False #loop prep
     outercounter = 1 #for counting how many outer loops
     while not Stop:
@@ -222,7 +222,11 @@ if __name__ == "__main__":
     except:
         print("(MASTER): COULD NOT FIND IP ADDRESS FILE FOR QUEUE - ABORTING PROCESS")
         exit()
-        return
     
-    #start working on prelim tasks
-    server_main(flood_size)
+    #model initialize
+    NFLmodel=grb.read('OR604 Model File v2.lp')
+    set_constrained_variables()
+    free_vars, var_status = get_variables()
+    NFLmodel.write('temp.lp') #write prelim reduced results
+    #run main
+    server_main(flood_size, free_vars, var_status)

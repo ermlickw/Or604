@@ -1,7 +1,41 @@
+from multiprocessing.managers import BaseManager
+import multiprocessing as mp 
+import traceback
+import random 
+import time 
+import sys
+import gurobipy as grb
 import time
+import pandas as pd
+import multiprocessing as mp 
+import traceback
+import random
+import time
+import colorama
 from colorama import Fore, Back, Style
 from termcolor import colored
 colorama.init(autoreset=True)
+
+# We are using a distributed queue.  We need to connect to it differently
+# This routine connects to the queues (input and output)
+def linkToQueue(servant_number, ip_address):
+    while True:
+        try:
+            # connect to the base manager
+            m = BaseManager(address=(ip_address, 60000), authkey=b'TestNBMDistributed')
+            m.register('input_queue')
+            m.register('output_queue')
+            m.connect()
+            # define and instantiate the queues
+            input_queue = m.input_queue()
+            output_queue = m.output_queue()
+            print("(SERVANT %s): CONNECTED TO THE QUEUE" % servant_number)
+            break
+        except:
+            print('(SERVANT %s): NO QUEUE MANAGER FOUND; WAITING'% servant_number)
+            time.sleep(1)
+    return input_queue, output_queue
+
 
 def varProb(iq,oq, servant_number):
     '''
@@ -18,14 +52,14 @@ def varProb(iq,oq, servant_number):
                 if task[0] == None:
                     break
                 if task[0] != loopcounter:
-                    NFLR = grb.read('updated.lp')
+                    NFLR = grb.read('temp.lp')
                     NFLR.setParam('OutputFlag', False )
                     NFLR.setParam('TimeLimit',10)
                     NFLR.setParam('Threads',1)
                     loopcounter+=1
                 local_start_time = time.localtime()
                 ##operate on the variable
-                myVar = NFLR.getVarByName(task)
+                myVar = NFLR.getVarByName(task[1])
                 myVar.lb = 1
                 NFLR.update()
                 NFLR.optimize()
@@ -33,11 +67,11 @@ def varProb(iq,oq, servant_number):
                     myVar.lb = 0
                     myVar.ub = 0
                     NFLR.update()
-                    mymessage =   "(SERVER %s - %s)" % (servant_number,my_name.upper()) + task + ' -- is infeasible Time: ' + str(time.mktime(time.localtime())-time.mktime(local_start_time))
+                    mymessage =   "(SERVER-%s-%s) " % (servant_number,my_name.upper()) + str(task[1]) + ' -- is infeasible Time: ' + str(time.mktime(time.localtime())-time.mktime(local_start_time))
                 else:
                     myVar.lb = 0
                     NFLR.update()
-                    mymessage =  Fore.BLACK + Back.GREEN + "(SERVER %s - %s)" % (servant_number,my_name.upper()) +task + ' -- is good. Time: '  + str(time.mktime(time.localtime())-time.mktime(local_start_time))
+                    mymessage =  Fore.BLACK + Back.GREEN + "(SERVER-%s-%s) " % (servant_number,my_name.upper()) + str(task[1]) + ' -- is good. Time: '  + str(time.mktime(time.localtime())-time.mktime(local_start_time))
                 NFLR.update()
                 oq.put((1,mymessage))
             except:
@@ -67,14 +101,13 @@ def servant_main():
             ip_address = my_file.readline().strip()
     except:
         print("(SERVER %s): COULD NOT FIND IP ADDRESS FILE FOR QUEUE - ABORTING PROCESS" % servant_number)
-        exit()
         return
 
     # establish connections to the input and output queues 
     input_queue, output_queue = linkToQueue(servant_number, ip_address)
 
     # create the parallel processes 
-    processes = [mp.Process(target=myWorker, args = (input_queue, output_queue, servant_number)) for x in range(pool_size)]
+    processes = [mp.Process(target=varProb, args = (input_queue, output_queue, servant_number)) for x in range(pool_size)]
 
     # start the parallel processes
     for p in processes:
@@ -93,5 +126,6 @@ def servant_main():
     print("SERVER %s HAS TERMINATED ITS %s PROCESSES AND IS SHUTTING DOWN" % (servant_number, pool_size))
 
 if __name__ == '__main__':
+    colorama.init(autoreset=True)
     servant_main()
 		
