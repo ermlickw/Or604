@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\BillyErmlick\\Anaconda3\\envs\\vEnv\\python.exe"
+    "python.pythonPath": "C:\\Users\\BillyErmlick\\Anaconda3\\envs\\vEnv\\python.exe",
+    "python.terminal.activateEnvironment": false,
+    "python.globalModuleInstallation": true
 }
