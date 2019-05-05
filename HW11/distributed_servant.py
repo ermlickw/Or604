@@ -11,7 +11,7 @@ def linkToQueue(servant_number, ip_address):
     while True:
         try:
             # connect to the base manager
-            m = BaseManager(address=(ip_address, 50000), authkey=b'TestNBMDistributed')
+            m = BaseManager(address=(ip_address, 60000), authkey=b'TestNBMDistributed')
             m.register('input_queue')
             m.register('output_queue')
             m.connect()

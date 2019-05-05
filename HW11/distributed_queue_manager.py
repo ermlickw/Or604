@@ -8,7 +8,7 @@ input_queue = Queue()
 output_queue = Queue()
 
 # connect to the base manager
-manager = BaseManager(address=('',50000), authkey = b'TestNBMDistributed')
+manager = BaseManager(address=('',60000), authkey = b'TestNBMDistributed')
 manager.register('input_queue', callable = lambda:input_queue)
 manager.register('output_queue', callable = lambda:output_queue)
 print('queues started')
