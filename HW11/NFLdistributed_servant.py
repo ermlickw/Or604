@@ -51,7 +51,7 @@ def varProb(iq,oq, servant_number):
             try:
                 if task[0] == None:
                     break
-                if task[0] != loopcounter:
+                if task[2] != loopcounter:
                     NFLR = grb.read('temp.lp')
                     NFLR.setParam('OutputFlag', False )
                     NFLR.setParam('TimeLimit',10)

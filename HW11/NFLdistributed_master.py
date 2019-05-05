@@ -96,7 +96,7 @@ def populate_queue(freevars,inputqueue, varsleft, outercounter):
     for v in freevars:
         if freevars[v].lb != freevars[v].ub:
             varname = 'GO_' + '_'.join(list(v))
-            inputqueue.put((outercounter,varname)) # dont have to pickle just needs to be pickeable - sending outerloop count and varaible to evaluate
+            inputqueue.put((outercounter,varname, outercounter)) # dont have to pickle just needs to be pickeable - sending outerloop count and varaible to evaluate
             varsleft+=1
     print('(MASTER): COMPLETED LOADING QUEUE WITH TASKS WITH A TOTAL RUN TIME OF %s' % str(time.mktime(time.localtime())-time.mktime(start_time)))
     return inputqueue, varsleft
@@ -170,10 +170,6 @@ def MyHandler(free_vars, var_status, iq, oq, start_time, NFLmodel, Stop, outerco
                 print(result)
         except:
             time.sleep(.5)
-            
-        NFLmodel.write('temp.lp')
-    
-
     return free_vars, var_status, Stop
 
 
