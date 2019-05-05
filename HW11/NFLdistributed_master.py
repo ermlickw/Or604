@@ -149,6 +149,7 @@ def MyHandler(free_vars, var_status, iq, oq, start_time, NFLmodel, Stop, outerco
     print('NEW ROUND: ' + str(varsleft) + ' free variables left. ')
     Stop = True #loop prep
     innercount = 0
+    #handing iq and oq messages for this round
     while innercount < varsleft: 
         try: 
             result = oq.get()
@@ -180,10 +181,10 @@ def server_main(flood_size, free_vars, var_status):
     # connect to the distributed queue
     iq, oq = linkToQueue(ip_address)
     Stop = False #loop prep
-    outercounter = 1 #for counting how many outer loops
+    outercounter = 1 #for counting how many outer loops to detemrine if nodes should read updated model 
     while not Stop:
-        free_vars, var_status, Stop = MyHandler(free_vars, var_status, iq, oq, start_time, NFLmodel, Stop, outercounter) #do var probing round
-        outercounter +=1
+        free_vars, var_status, Stop = MyHandler(free_vars, var_status, iq, oq, start_time, NFLmodel, Stop, outercounter) #do var probing round and see if more rounds needed
+        outercounter +=1 
         write = pd.DataFrame.from_dict(var_status,orient="index") #write solution
         write.to_csv("GameBoundsTemp.csv")
         NFLmodel.write('temp.lp')

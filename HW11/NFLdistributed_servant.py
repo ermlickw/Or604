@@ -45,7 +45,7 @@ def varProb(iq,oq, servant_number):
     my_name = mp.current_process().name
     loopcounter = 0 #loop prep
     local_start_time = time.localtime()
-    while True:
+    while True: #check queue and do your task
         try:
             task = iq.get()
             try:
@@ -73,9 +73,9 @@ def varProb(iq,oq, servant_number):
                     NFLR.update()
                     mymessage =  Fore.BLACK + Back.GREEN + "(SERVER-%s-%s) " % (servant_number,my_name.upper()) + str(task[1]) + ' -- is good. Time: '  + str(time.mktime(time.localtime())-time.mktime(local_start_time))
                 NFLR.update()
-                oq.put((1,mymessage))
+                oq.put((1,mymessage)) # 1 is important and counted
             except:
-                oq.put((2,traceback.format_exc()))
+                oq.put((2,traceback.format_exc())) # 2 is just information
         except:
             time.sleep(4)
     output_queue.put((0,"(SERVER %s - %s) FINISHED PROCESSING AND IS READY TO TERMINATE WITH A TOTAL RUN TIME OF %s" % (my_server, my_name ) + str(time.mktime(time.localtime())-time.mktime(local_start_time))))
